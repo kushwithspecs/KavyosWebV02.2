@@ -1,0 +1,3858 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="images/cropped-favicon.png" />
+    <style type="text/css">
+      .home-hero__heading {
+        color: #263040 !important;
+      }
+      .text-blocks__section__heading {
+        font-size: clamp(1.85rem, 3vw, 2.5rem) !important;
+      }
+      .section__heading {
+        font-size: clamp(2.25rem, 4vw, 3rem) !important;
+      }
+      .curtain {
+        display: none !important;
+      }
+    </style>
+    <!-- <script src="https://www.unboundxinc.com/wp-content/themes/unboundx/public/assets/loadpagefast.js"></script> -->
+    <title>Kavyos | AI-Powered Talent Staffing & Enterprise Platforms</title>
+    <meta name="robots" content="max-image-preview:large" />
+    <style>
+      img:is([sizes="auto" i], [sizes^="auto," i]) {
+        contain-intrinsic-size: 3000px 1500px;
+      }
+    </style>
+    <style>
+      /* ── shadcn Navbar1 styles ── */
+      .snb-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: #ffffff;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 0 clamp(1rem, 3vw, 2rem);
+      }
+      html, body {
+        overflow-x: hidden;
+      }
+      * {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      *::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+      .site-wrapper {
+        padding-top: 64px;
+        overflow-x: hidden;
+      }
+      .snb-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100%;
+        margin: 0;
+        height: 64px;
+        gap: 1.5rem;
+      }
+      /* Brand */
+      .snb-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        flex-shrink: 0;
+      }
+      .snb-brand__logo {
+        height: 36px;
+        width: auto;
+        object-fit: contain;
+      }
+      .snb-brand__name {
+        font-size: 1.0625rem;
+        font-weight: 600;
+        color: #111827;
+        white-space: nowrap;
+      }
+      /* Desktop links */
+      .snb-links {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .snb-link {
+        display: inline-flex;
+        align-items: center;
+        height: 2.25rem;
+        padding: 0 1rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #374151;
+        text-decoration: none;
+        border-radius: 0.375rem;
+        transition:
+          background 120ms,
+          color 120ms;
+        white-space: nowrap;
+      }
+      .snb-link:hover {
+        background: #f3f4f6;
+        color: #111827;
+      }
+      /* Auth buttons */
+      .snb-auth {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-shrink: 0;
+      }
+      .snb-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.25rem;
+        padding: 0 0.875rem;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        border-radius: 0.375rem;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+        transition:
+          background 120ms,
+          color 120ms,
+          border-color 120ms;
+        border: 1px solid transparent;
+        line-height: 1;
+      }
+      .snb-btn--outline {
+        background: #ffffff;
+        border-color: #d1d5db;
+        color: #374151;
+      }
+      .snb-btn--outline:hover {
+        background: #f9fafb;
+        border-color: #9ca3af;
+        color: #111827;
+      }
+      .snb-btn--solid {
+        background: #111827;
+        color: #ffffff;
+        border-color: #111827;
+      }
+      .snb-btn--solid:hover {
+        background: #1f2937;
+        border-color: #1f2937;
+      }
+      .snb-btn--full {
+        width: 100%;
+        height: 2.5rem;
+        font-size: 0.875rem;
+      }
+      /* Hamburger button */
+      .snb-menu-btn {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 2.25rem;
+        height: 2.25rem;
+        background: #ffffff;
+        border: 1px solid #d1d5db;
+        border-radius: 0.375rem;
+        cursor: pointer;
+        color: #374151;
+        padding: 0;
+        flex-shrink: 0;
+      }
+      .snb-menu-btn:hover {
+        background: #f9fafb;
+      }
+      /* Responsive: hide/show */
+      @media (max-width: 1023px) {
+        .snb-links,
+        .snb-auth {
+          display: none;
+        }
+        .snb-menu-btn {
+          display: inline-flex;
+        }
+      }
+      /* Overlay */
+      .snb-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1100;
+        opacity: 0;
+        transition: opacity 300ms;
+      }
+      .snb-overlay.is-open {
+        display: block;
+        opacity: 1;
+      }
+      /* Sheet drawer */
+      .snb-sheet {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: min(75vw, 360px);
+        background: #ffffff;
+        z-index: 1200;
+        display: flex;
+        flex-direction: column;
+        box-shadow: -4px 0 24px rgba(0, 0, 0, 0.12);
+        transform: translateX(100%);
+        transition: transform 300ms ease-in-out;
+        overflow-y: auto;
+      }
+      .snb-sheet.is-open {
+        transform: translateX(0);
+      }
+      .snb-sheet__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid #f3f4f6;
+      }
+      .snb-close-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        color: #6b7280;
+        border-radius: 0.375rem;
+        padding: 0;
+        transition:
+          background 120ms,
+          color 120ms;
+      }
+      .snb-close-btn:hover {
+        background: #f3f4f6;
+        color: #111827;
+      }
+      .snb-sheet__body {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        flex: 1;
+      }
+      .snb-sheet__links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .snb-sheet__link {
+        display: block;
+        padding: 0.625rem 0.75rem;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        color: #111827;
+        text-decoration: none;
+        border-radius: 0.375rem;
+        transition: background 120ms;
+      }
+      .snb-sheet__link:hover {
+        background: #f3f4f6;
+      }
+      .snb-sheet__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        border-top: 1px solid #f3f4f6;
+        padding-top: 1.25rem;
+        margin-top: auto;
+      }
+
+      /* ── Text-blocks scroll animations ── */
+
+      /* Initial hidden states */
+      .text-blocks__section {
+        opacity: 0;
+      }
+      /* Odd rows: image on right → text slides from left, image from right */
+      .text-blocks__section:nth-child(odd) .text-blocks__section__inner {
+        transform: translateX(-60px);
+        opacity: 0;
+        transition:
+          transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+          opacity 0.7s ease;
+      }
+      .text-blocks__section:nth-child(odd) .text-blocks__section__image {
+        transform: translateX(60px);
+        opacity: 0;
+        transition:
+          transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.12s,
+          opacity 0.7s ease 0.12s;
+      }
+      /* Even rows: image on left → text from right, image from left */
+      .text-blocks__section:nth-child(even) .text-blocks__section__inner {
+        transform: translateX(60px);
+        opacity: 0;
+        transition:
+          transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+          opacity 0.7s ease;
+      }
+      .text-blocks__section:nth-child(even) .text-blocks__section__image {
+        transform: translateX(-60px);
+        opacity: 0;
+        transition:
+          transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.12s,
+          opacity 0.7s ease 0.12s;
+      }
+      /* Visible state triggered by JS */
+      .text-blocks__section.tb-visible {
+        opacity: 1;
+      }
+      .text-blocks__section.tb-visible .text-blocks__section__inner,
+      .text-blocks__section.tb-visible .text-blocks__section__image {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      /* SVG icon animations once visible */
+      /* Clock minute hand — continuous rotation loop */
+      .text-blocks__section.tb-visible .tb-clock-min {
+        transform-origin: 290px 270px;
+        animation: tb-tickMin 6s linear 0.6s infinite;
+      }
+      .text-blocks__section.tb-visible .tb-clock-hr {
+        transform-origin: 290px 270px;
+        animation: tb-clockHr 2s ease-in-out 0.6s both;
+      }
+      @keyframes tb-tickMin {
+        to { transform: rotate(360deg); }
+      }
+      @keyframes tb-clockHr {
+        from { transform: rotate(45deg); }
+        to   { transform: rotate(0deg); }
+      }
+      /* Checkmark draw-on */
+      .text-blocks__section.tb-visible .tb-checkmark {
+        stroke-dasharray: 49;
+        stroke-dashoffset: 49;
+        animation: tb-draw 0.6s ease-out 0.8s forwards;
+      }
+      @keyframes tb-draw {
+        to { stroke-dashoffset: 0; }
+      }
+      /* Badge circle pop-in bounce */
+      .text-blocks__section.tb-visible .tb-badge-g {
+        transform-origin: 310px 110px;
+        animation: tb-badge-pop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+      }
+      @keyframes tb-badge-pop {
+        from { transform: scale(0); opacity: 0; }
+        to   { transform: scale(1); opacity: 1; }
+      }
+      /* Network sonar pulse */
+      .text-blocks__section.tb-visible .tb-pulse {
+        transform-origin: 210px 190px;
+        animation: tb-sonar 2.4s ease-out 0.5s infinite;
+        opacity: 0;
+      }
+      @keyframes tb-sonar {
+        0%   { transform: scale(1);   opacity: 0.55; }
+        100% { transform: scale(2.4); opacity: 0; }
+      }
+      /* Connector lines — marching ants outward */
+      .text-blocks__section.tb-visible .tb-connector {
+        animation: tb-march 1.8s linear 0.5s infinite;
+      }
+      @keyframes tb-march {
+        from { stroke-dashoffset: 8; }
+        to   { stroke-dashoffset: 0; }
+      }
+      /* Outer nodes — staggered breathing */
+      .text-blocks__section.tb-visible .tb-on   { animation: tb-breathe 3s ease-in-out infinite; }
+      .text-blocks__section.tb-visible .tb-on-2 { animation-delay: 0.5s; }
+      .text-blocks__section.tb-visible .tb-on-3 { animation-delay: 1s; }
+      .text-blocks__section.tb-visible .tb-on-4 { animation-delay: 1.5s; }
+      .text-blocks__section.tb-visible .tb-on-5 { animation-delay: 2s; }
+      .text-blocks__section.tb-visible .tb-on-6 { animation-delay: 2.5s; }
+      @keyframes tb-breathe {
+        0%, 100% { opacity: 1; }
+        50%       { opacity: 0.5; }
+      }
+
+      /* ── What Makes Us Different card ── */
+      .wmd-wrap {
+        position: relative;
+        z-index: 10;
+        background: #fff;
+        padding: 48px clamp(1.25rem, 3vw, 2.5rem) 60px;
+      }
+      .wmd-card {
+        max-width: min(1440px, 100%);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        background:
+          radial-gradient(ellipse at 85% 100%, rgba(147, 197, 253, 0.45) 0%, transparent 50%),
+          radial-gradient(ellipse at 15% 100%, rgba(186, 230, 253, 0.3) 0%, transparent 45%),
+          #ffffff;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid rgba(147, 197, 253, 0.3);
+        box-shadow:
+          0 4px 32px rgba(59, 130, 246, 0.07),
+          0 1px 0 rgba(255, 255, 255, 0.9) inset;
+      }
+      .wmd-item {
+        padding: 48px clamp(2rem, 3vw, 3.5rem);
+        border-right: 1px solid rgba(147, 197, 253, 0.35);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+      }
+      .wmd-item:nth-child(2) { border-right: none; }
+      .wmd-item:nth-child(3),
+      .wmd-item:nth-child(4) { border-top: 1px solid rgba(147, 197, 253, 0.35); }
+      .wmd-item:nth-child(4) { border-right: none; }
+      .wmd-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background: rgba(59, 130, 246, 0.10);
+        border-radius: 50%;
+        color: #1d4ed8;
+        margin-bottom: 24px;
+        border: 1px solid rgba(59, 130, 246, 0.18);
+        flex-shrink: 0;
+      }
+      .wmd-name {
+        font-size: 1.45rem;
+        font-weight: 500;
+        color: #0f172a;
+        margin: 0 0 12px;
+        line-height: 1.35;
+      }
+      .wmd-desc {
+        font-size: 1rem;
+        color: #475569;
+        line-height: 1.7;
+        margin: 0 0 28px;
+        flex: 1;
+      }
+      .wmd-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: #1d4ed8;
+        text-decoration: none;
+        margin-top: auto;
+        transition: gap 0.2s ease;
+      }
+      .wmd-link:hover { gap: 10px; }
+      .wmd-link svg { transition: transform 0.2s ease; }
+      .wmd-link:hover svg { transform: translateX(3px); }
+      .wmd-hover-overlay {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+      }
+      .wmd-item:hover .wmd-hover-overlay {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .wmd-hover-overlay img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transform: scale(1.06);
+        transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .wmd-item:hover .wmd-hover-overlay img {
+        transform: scale(1);
+      }
+      .wmd-hover-overlay-inner {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(10, 20, 50, 0.82) 0%, rgba(10, 20, 50, 0.35) 55%, transparent 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: clamp(1.5rem, 3vw, 2.5rem);
+      }
+      .wmd-hover-title {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #fff;
+        margin: 0 0 16px;
+        line-height: 1.35;
+      }
+      .wmd-hover-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff;
+        color: #0f172a;
+        font-size: 0.9rem;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 100px;
+        text-decoration: none;
+        width: fit-content;
+        transition: background 0.2s ease, gap 0.2s ease;
+      }
+      .wmd-hover-btn:hover { background: #dbeafe; gap: 12px; }
+      @media (max-width: 540px) {
+        .wmd-card { grid-template-columns: 1fr; }
+        .wmd-item { border-right: none; border-top: 1px solid rgba(147, 197, 253, 0.35); }
+        .wmd-item:first-child { border-top: none; }
+        .wmd-item:nth-child(3) { border-top: 1px solid rgba(147, 197, 253, 0.35); }
+      }
+
+      #JS-quotes-container { height: 0 !important; display: none !important; }
+
+      /* ── Testimonial Feedback (tfb-) ── */
+      .tfb-section {
+        background: #fff;
+        padding: 80px clamp(1.25rem, 3vw, 2.5rem) 100px;
+      }
+      .tfb-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .tfb-header {
+        text-align: center;
+        margin-bottom: 48px;
+      }
+      .tfb-title {
+        font-size: clamp(2rem, 3.5vw, 2.75rem);
+        font-weight: 500;
+        color: #111;
+        margin: 0 0 12px;
+      }
+      .tfb-subtitle {
+        color: #6b7280;
+        font-size: 1rem;
+        margin: 0 auto;
+      }
+      .tfb-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        align-items: start;
+      }
+      .tfb-col {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .tfb-card {
+        border-radius: 12px;
+        border: 1px solid #e5e7eb;
+        padding: 20px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        opacity: 0;
+        transform: translateY(-20px);
+        filter: blur(10px);
+        transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
+      }
+      .tfb-card.tfb-visible {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0px);
+      }
+      .tfb-card--light {
+        background: #fafafa;
+        color: #111;
+      }
+      .tfb-card--blue {
+        background: #2563eb;
+        color: #fff;
+      }
+      .tfb-card--dark {
+        background: #111111;
+        color: #fff;
+      }
+      .tfb-grid-bg {
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(to right, #4f4f4f2e 1px, transparent 1px),
+          linear-gradient(to bottom, #4f4f4f2e 1px, transparent 1px);
+        background-size: 50px 56px;
+        -webkit-mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 70%, transparent 110%);
+        mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, #000 70%, transparent 110%);
+        pointer-events: none;
+      }
+      .tfb-card-body {
+        position: relative;
+        z-index: 1;
+      }
+      .tfb-card-body > p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+      .tfb-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-top: 20px;
+        gap: 12px;
+      }
+      .tfb-name {
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin: 0 0 2px;
+        line-height: 1.2;
+      }
+      .tfb-role {
+        font-size: 0.875rem;
+        margin: 0;
+      }
+      .tfb-card--blue .tfb-role,
+      .tfb-card--dark .tfb-role { opacity: 0.75; }
+      .tfb-card--light .tfb-role { color: #555; }
+      .tfb-avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 10px;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+      .tfb-avatar--sm {
+        width: 48px;
+        height: 48px;
+      }
+      @media (max-width: 1024px) {
+        .tfb-grid { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 640px) {
+        .tfb-avatar { width: 48px; height: 48px; }
+      }
+
+      /* ── Growth chart widget (cg-) ── */
+      .creators__image { position: relative; }
+      .creators__image img {
+        width: 100%;
+        height: 480px;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 20px;
+        aspect-ratio: 1 / 1;
+      }
+      .cg-chart {
+        position: absolute;
+        bottom: 12%;
+        left: -6%;
+        background: #fff;
+        border-radius: 18px;
+        padding: 16px 18px 12px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+        width: 155px;
+        z-index: 3;
+      }
+      .cg-chart__title {
+        font-size: 0.68rem;
+        font-weight: 600;
+        color: #6b7280;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 10px;
+      }
+      .cg-chart__bars {
+        display: flex;
+        align-items: flex-end;
+        gap: 5px;
+        height: 72px;
+      }
+      .cg-bar {
+        flex: 1;
+        border-radius: 4px 4px 0 0;
+        height: 0;
+      }
+      .cg-bar:nth-child(1) { background: #bfdbfe; }
+      .cg-bar:nth-child(2) { background: #93c5fd; }
+      .cg-bar:nth-child(3) { background: #60a5fa; }
+      .cg-bar:nth-child(4) { background: #3b82f6; }
+      .cg-bar:nth-child(5) { background: #1d4ed8; }
+      .cg-bar:nth-child(6) { background: #1e3a8a; }
+      .cg-bar.cg-grow {
+        animation: cg-rise var(--dur, 0.65s) cubic-bezier(0.34, 1.4, 0.64, 1) var(--delay, 0s) forwards;
+      }
+      @keyframes cg-rise {
+        from { height: 0; }
+        to   { height: var(--h); }
+      }
+      .cg-chart__footer {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 8px;
+      }
+      .cg-chart__trend {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #16a34a;
+      }
+      .cg-chart__sub {
+        font-size: 0.65rem;
+        color: #9ca3af;
+      }
+      .cg-metric {
+        position: absolute;
+        bottom: 6%;
+        right: -4%;
+        background: #007bff;
+        color: #fff;
+        border-radius: 100px;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        box-shadow: 0 4px 20px rgba(0,123,255,0.35);
+        z-index: 3;
+        white-space: nowrap;
+      }
+      .cg-metric__icon { font-size: 1.25rem; line-height: 1; }
+      .cg-metric__text { display: flex; flex-direction: column; }
+      .cg-metric__value { font-size: 1.35rem; font-weight: 600; line-height: 1.2; }
+      .cg-metric__label { font-size: 0.8rem; opacity: 0.85; }
+      @media (max-width: 768px) {
+        .cg-chart { left: 0; bottom: 5%; width: 130px; }
+        .cg-metric { right: 0; bottom: -2%; }
+      }
+
+            /* ── Creator box tag + read more ── */
+      .crbox-tag {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #007bff;
+        background: #eef4ff;
+        border-radius: 50px;
+        padding: 4px 12px;
+        margin-bottom: 16px;
+      }
+      .crbox-footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 24px;
+      }
+      .crbox-readmore {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #007bff;
+        text-decoration: none;
+        transition: gap 150ms ease;
+      }
+      .crbox-readmore:hover {
+        gap: 10px;
+        color: #007bff;
+      }
+
+      /* creators__box hover — see inline style block before the section */
+
+      /* ── Logo Cloud ── */
+      .lc-section {
+        padding: 48px clamp(1rem, 5vw, 3rem);
+        background: #ffffff;
+        text-align: center;
+      }
+      .lc-label {
+        font-size: clamp(0.875rem, 0.8rem + 0.3vw, 1.125rem);
+        font-weight: 500;
+        color: #6b7280;
+        margin-bottom: 20px;
+      }
+      .lc-divider {
+        height: 1px;
+        max-width: 480px;
+        margin: 0 auto 20px;
+        background: #e5e7eb;
+        -webkit-mask-image: linear-gradient(
+          to right,
+          transparent,
+          black,
+          transparent
+        );
+        mask-image: linear-gradient(to right, transparent, black, transparent);
+      }
+      .lc-track-wrap {
+        overflow: hidden;
+        -webkit-mask-image: linear-gradient(
+          to right,
+          transparent,
+          black 12%,
+          black 88%,
+          transparent
+        );
+        mask-image: linear-gradient(
+          to right,
+          transparent,
+          black 12%,
+          black 88%,
+          transparent
+        );
+        padding: 8px 0;
+      }
+      .lc-track {
+        display: flex;
+        gap: 56px;
+        width: max-content;
+        align-items: center;
+        animation: lc-scroll 36s linear infinite;
+      }
+      .lc-track:hover {
+        animation-play-state: paused;
+      }
+      .lc-track img {
+        height: 20px;
+        width: auto;
+        object-fit: contain;
+        pointer-events: none;
+        user-select: none;
+        filter: grayscale(100%) opacity(0.55);
+        transition: filter 200ms;
+        flex-shrink: 0;
+      }
+      .lc-track img:hover {
+        filter: grayscale(0%) opacity(1);
+      }
+      @media (min-width: 768px) {
+        .lc-track img {
+          height: 26px;
+        }
+      }
+      @keyframes lc-scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* ── Case Study ── */
+      .cs-section {
+        padding: 80px clamp(1rem, 5vw, 3rem);
+        background: #fff;
+      }
+      .cs-header {
+        text-align: center;
+        max-width: 640px;
+        margin: 0 auto 56px;
+      }
+      .cs-eyebrow {
+        display: inline-block;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #6b7280;
+        margin-bottom: 14px;
+      }
+      .cs-title {
+        font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+        font-weight: 500;
+        color: #0f172a;
+        line-height: 1.15;
+        margin: 0 0 14px;
+      }
+      .cs-subtitle {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #6b7280;
+        line-height: 1.65;
+        margin: 0;
+      }
+      .cs-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr 0.9fr;
+        gap: 0 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+        align-items: start;
+      }
+      .cs-card {
+        background: #0f172a;
+        border-radius: 18px;
+        padding: 36px 32px 32px;
+        color: #fff;
+        min-height: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .cs-card__label {
+        display: inline-block;
+        font-size: 0.8125rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #94a3b8;
+        margin-bottom: 18px;
+      }
+      .cs-card__heading {
+        font-size: 1.45rem;
+        font-weight: 500;
+        color: #fff;
+        line-height: 1.35;
+        margin: 0;
+      }
+      .cs-card__footer {
+        margin-top: 28px;
+      }
+      .cs-card__tag {
+        font-size: 0.8125rem;
+        color: #475569;
+        letter-spacing: 0.05em;
+      }
+      .cs-solution {
+        border-left: 1px solid #e5e7eb;
+        padding: 4px 0 4px 36px;
+      }
+      .cs-solution__heading {
+        font-size: 1.15rem;
+        font-weight: 500;
+        color: #0f172a;
+        margin: 0 0 14px;
+        line-height: 1.4;
+      }
+      .cs-solution__body {
+        font-size: 1rem;
+        color: #6b7280;
+        line-height: 1.75;
+        margin: 0 0 32px;
+      }
+      .cs-solution__divider {
+        width: 100%;
+        height: 1px;
+        background: #e5e7eb;
+        margin-bottom: 24px;
+      }
+      .cs-solution__author-name {
+        display: block;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        color: #0f172a;
+        margin-bottom: 2px;
+      }
+      .cs-solution__author-role {
+        display: block;
+        font-size: 0.875rem;
+        color: #9ca3af;
+      }
+      .cs-outcomes {
+        border-left: 1px solid #e5e7eb;
+        padding: 4px 0 4px 36px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .cs-stat__num {
+        display: block;
+        font-size: clamp(2.5rem, 4vw, 3.25rem);
+        font-weight: 600;
+        color: #0f172a;
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+      .cs-stat__name {
+        display: block;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #0f172a;
+        margin-bottom: 2px;
+      }
+      .cs-stat__desc {
+        display: block;
+        font-size: 0.9375rem;
+        color: #9ca3af;
+      }
+      .cs-stat + .cs-stat {
+        border-top: 1px solid #e5e7eb;
+        padding-top: 28px;
+        margin-top: 28px;
+      }
+      .cs-stat__num[data-count] {
+        transition: none;
+      }
+      @media (max-width: 900px) {
+        .cs-grid {
+          grid-template-columns: 1fr;
+          gap: 32px 0;
+        }
+        .cs-solution,
+        .cs-outcomes {
+          border-left: none;
+          padding-left: 0;
+          border-top: 1px solid #e5e7eb;
+          padding-top: 32px;
+        }
+      }
+    </style>
+
+    <style>
+      /* ── Core Practice Areas ── */
+      .cpa-section {
+        padding: 92px clamp(1.75rem, 5.75vw, 5.75rem);
+        background: #ffffff;
+        position: sticky;
+        top: 64px;
+        z-index: 12;
+        border-radius: 28px 28px 0 0;
+        box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.10);
+      }
+      .cpa-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        padding: 55px clamp(1.75rem, 4.6vw, 64px);
+      }
+      .cpa-eyebrow {
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #007bff;
+        margin-bottom: 11px;
+      }
+      .cpa-heading {
+        font-size: clamp(2rem, 4vw, 2.875rem);
+        font-weight: 500;
+        color: #111827;
+        margin: 0 0 14px;
+      }
+      .cpa-sub {
+        font-size: 1.15rem;
+        color: #6b7280;
+        max-width: 644px;
+        margin: 0 0 55px;
+        line-height: 1.65;
+      }
+      .cpa-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 16px;
+        aspect-ratio: 2 / 1;
+      }
+      /* Databricks: tall left column */
+      .cpa-grid .cpa-card:nth-child(1) { grid-row: 1 / 3; }
+      /* General IT: wide bottom-right */
+      .cpa-grid .cpa-card:nth-child(4) { grid-column: 2 / 4; }
+
+      .cpa-card {
+        background:
+          radial-gradient(ellipse at 85% 100%, rgba(147, 197, 253, 0.45) 0%, transparent 55%),
+          radial-gradient(ellipse at 15% 0%,   rgba(186, 230, 253, 0.30) 0%, transparent 50%),
+          #ffffff;
+        border: 1.5px solid rgba(147, 197, 253, 0.75);
+        border-radius: 16px;
+        padding: 28px 24px;
+        overflow: hidden;
+        box-shadow: 0 4px 24px rgba(59, 130, 246, 0.07), 0 1px 0 rgba(255,255,255,0.9) inset;
+        transition: box-shadow 0.2s, transform 0.2s;
+      }
+      .cpa-card:hover {
+        box-shadow: 0 8px 32px rgba(59, 130, 246, 0.15);
+        transform: translateY(-3px);
+      }
+      .cpa-card--featured {
+        background: linear-gradient(135deg, #0a1628 0%, #0d2248 50%, #0a3080 100%);
+        border: 1.5px solid rgba(0, 123, 255, 0.75);
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+      }
+      /* Databricks office/data image — fades from visible at top to transparent at bottom */
+      .cpa-card--featured .cpa-card__bg-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        opacity: 0.28;
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0) 100%);
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 45%, rgba(0,0,0,0) 100%);
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+      }
+      .cpa-card--featured:hover .cpa-card__bg-img { opacity: 0.38; }
+      /* radial spotlight */
+      .cpa-card--featured::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        left: -40px;
+        width: 220px;
+        height: 220px;
+        background: radial-gradient(circle, rgba(0, 150, 255, 0.25) 0%, transparent 70%);
+        pointer-events: none;
+        z-index: 1;
+      }
+      /* bottom-right glow accent */
+      .cpa-card--featured::after {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        width: 160px;
+        height: 160px;
+        background: radial-gradient(circle, rgba(99, 179, 255, 0.15) 0%, transparent 70%);
+        pointer-events: none;
+        z-index: 1;
+      }
+      .cpa-card--featured .cpa-icon,
+      .cpa-card--featured .cpa-card__title,
+      .cpa-card--featured .cpa-card__list { position: relative; z-index: 2; }
+      .cpa-card--featured .cpa-card__title {
+        color: #ffffff;
+      }
+      .cpa-card--featured .cpa-card__list li {
+        color: rgba(255,255,255,0.82);
+      }
+      .cpa-card--featured .cpa-card__list li::before {
+        background: #66b8ff;
+      }
+      .cpa-card--featured .cpa-icon svg polygon,
+      .cpa-card--featured .cpa-icon svg line {
+        stroke: #66b8ff;
+      }
+      .cpa-card--featured .cpa-icon svg polygon:first-child {
+        fill: rgba(102, 184, 255, 0.12);
+      }
+      .cpa-card--featured:hover {
+        box-shadow: 0 12px 48px rgba(0, 123, 255, 0.45);
+        transform: translateY(-4px);
+      }
+      .cpa-icon {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 16px;
+      }
+      .cpa-icon svg {
+        width: 100%;
+        height: 100%;
+      }
+      .cpa-card__title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #111827;
+        margin: 0 0 14px;
+      }
+      .cpa-card__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+      }
+      .cpa-card__list li {
+        font-size: 0.9rem;
+        color: #374151;
+        padding-left: 18px;
+        position: relative;
+        line-height: 1.45;
+      }
+      .cpa-card__list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #007bff;
+      }
+
+      /* ── Featured Practice Wrap (Databricks + Actimize) ── */
+      .tbf-wrap {
+        position: relative;
+        background: #f4f8ff;
+        padding: 80px 0;
+      }
+      .tbf-bg { display: none; }
+      .tbf-overlay { display: none; }
+      .tbf-blocks {
+        position: relative;
+      }
+      /* image column */
+      .tbf-img-wrap {
+        position: relative !important;
+        display: flex !important;
+        align-items: stretch;
+        gap: 16px;
+        min-height: 360px;
+      }
+      /* the photo frame — lavender tinted card like the screenshot */
+      .tbf-photo-frame {
+        position: relative;
+        flex: 0 0 90%;
+        width: 90%;
+        border-radius: 20px;
+        overflow: hidden;
+        background: #dde8f8;
+      }
+      .tbf-photo-frame img:first-child {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+      .tbf-photo-frame--zoomed-out img:first-child {
+        transform: scale(0.9);
+        object-fit: contain;
+        background: #dde8f8;
+        display: block;
+        border-radius: 20px;
+      }
+      /* gif overlay card */
+      .tbf-gif-card {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 8px;
+        box-shadow: 0 8px 28px rgba(0,0,0,0.18);
+        width: 120px;
+        z-index: 2;
+      }
+      .tbf-gif-card img {
+        width: 100% !important;
+        height: auto !important;
+        border-radius: 8px;
+        display: block;
+        object-fit: unset;
+        object-position: unset;
+      }
+      /* floating stat card — bottom left */
+      .tbf-stat-card {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 14px 18px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        min-width: 170px;
+        z-index: 2;
+      }
+      .tbf-stat-card__label {
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #6b7280;
+        margin-bottom: 8px;
+      }
+      .tbf-stat-card__bars {
+        display: flex;
+        align-items: flex-end;
+        gap: 5px;
+        height: 48px;
+        margin-bottom: 10px;
+      }
+      .tbf-bar {
+        border-radius: 3px 3px 0 0;
+        flex: 1;
+      }
+      .tbf-stat-card__foot {
+        font-size: 0.8rem;
+        color: #374151;
+      }
+      .tbf-stat-card__foot strong {
+        color: #16a34a;
+        font-weight: 600;
+      }
+      /* floating badge — bottom right */
+      .tbf-stat-badge {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background: #007bff;
+        border-radius: 50px;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 2;
+        box-shadow: 0 8px 28px rgba(0,123,255,0.35);
+      }
+      .tbf-stat-badge__star {
+        font-size: 1.1rem;
+        color: #fff;
+      }
+      .tbf-stat-badge__text {
+        color: #fff;
+      }
+      .tbf-stat-badge__text strong {
+        display: block;
+        font-size: 1.05rem;
+        font-weight: 600;
+        line-height: 1.2;
+      }
+      .tbf-stat-badge__text small {
+        font-size: 0.72rem;
+        opacity: 0.85;
+      }
+      /* illustration beside the photo */
+      .tbf-illus {
+        flex: 0 0 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .tbf-illus svg {
+        width: 130px;
+        height: auto;
+        filter: drop-shadow(0 8px 24px rgba(0,80,200,0.2));
+      }
+      /* NICE Actimize logo overlay on photo */
+      .tbf-logo-overlay {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 12px 20px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .tbf-logo-overlay img {
+        height: 44px;
+        width: auto;
+        display: block;
+        object-fit: contain;
+        border-radius: 0;
+      }
+      /* divider between Databricks and Actimize */
+      .tbf-divider {
+        width: min(900px, 90%);
+        margin: 80px auto;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(147,197,253,0.7), transparent);
+      }
+      .tbf-section {
+        padding-block: 20px;
+      }
+      /* fix SVG overflow-stretch in regular sections too */
+      .text-blocks__section__image svg {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        display: block;
+      }
+
+      /* ── Who We Are video zoom ── */
+      .media-large {
+        overflow: hidden;
+        border-radius: clamp(1.5rem, 1.0663rem + 1.2048vi, 2rem);
+      }
+      .media-large video {
+        transform: scale(1.2);
+        transform-origin: center center;
+      }
+    </style>
+
+    <style>
+      /* ── Solutions cards — premium animations ── */
+
+      @keyframes cardFadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(32px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .users__box {
+        transition:
+          transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+          box-shadow 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+          background-color 0.25s ease;
+        will-change: transform, box-shadow;
+        cursor: default;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Shimmer overlay on hover */
+      .users__box::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0) 40%,
+          rgba(255, 255, 255, 0.45) 50%,
+          rgba(255, 255, 255, 0) 60%
+        );
+        background-size: 250% 250%;
+        background-position: 150% 150%;
+        transition: background-position 0.6s ease;
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      .users__box:hover::before {
+        background-position: -50% -50%;
+        opacity: 1;
+      }
+
+      /* Lift + glow */
+      .users__box:hover {
+        transform: translateY(-10px) scale(1.015);
+        box-shadow:
+          0 24px 48px rgba(0, 107, 255, 0.12),
+          0 8px 16px rgba(0, 0, 0, 0.06);
+        background-color: #fafcff;
+      }
+
+      /* Icon pop on parent hover */
+      .users__box:hover .users__box__icon img {
+        transform: scale(1.15) rotate(-4deg);
+        transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .users__box__icon img {
+        transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      /* Title color accent on hover */
+      .users__box:hover .users__box__title {
+        color: #0055cc;
+        transition: color 0.25s ease;
+      }
+
+      .users__box__title {
+        transition: color 0.25s ease;
+      }
+
+      /* Staggered entrance via IntersectionObserver */
+      .users__box {
+        opacity: 0;
+        transform: translateY(32px);
+      }
+
+      .users__box.is-visible {
+        animation: cardFadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+
+      /* Stagger delays for each card */
+      .swiper-slide:nth-child(1) .users__box { animation-delay: 0.05s; }
+      .swiper-slide:nth-child(2) .users__box { animation-delay: 0.15s; }
+      .swiper-slide:nth-child(3) .users__box { animation-delay: 0.25s; }
+      .swiper-slide:nth-child(4) .users__box { animation-delay: 0.35s; }
+      .swiper-slide:nth-child(5) .users__box { animation-delay: 0.45s; }
+      .swiper-slide:nth-child(6) .users__box { animation-delay: 0.55s; }
+      .swiper-slide:nth-child(7) .users__box { animation-delay: 0.65s; }
+
+      /* Respect reduced-motion */
+      @media (prefers-reduced-motion: reduce) {
+        .users__box {
+          opacity: 1;
+          transform: none;
+          transition: none;
+          animation: none !important;
+        }
+        .users__box::before { display: none; }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="contact-form-7-css"
+      href="css/styles.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="theme-fonts-css"
+      href="css/fonts.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="theme-styles-css"
+      href="css/app.css"
+      media="all"
+    />
+    <link rel="stylesheet" id="popup-css-css" href="css/popup.css" media="" />
+    <link
+      rel="stylesheet"
+      id="appmodelpopup-css-css"
+      href="css/appmodel-popup.css"
+      media=""
+    />
+    <link rel="canonical" href="https://www.unboundxinc.com/" />
+    <meta property="og:image" content="images/All_Social_Media_Posts.jpg" />
+    <meta
+      name="twitter:image"
+      content="https://unboundxinc.com/wp-content/uploads/2025/05/All_Social_Media_Posts.jpg"
+    />
+    <link rel="icon" href="images/cropped-favicon-32x32.png" sizes="32x32" />
+    <link
+      rel="icon"
+      href="images/cropped-favicon-192x192.png"
+      sizes="192x192"
+    />
+    <link rel="apple-touch-icon" href="images/cropped-favicon-180x180.png" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://www.unboundxinc.com/wp-content/uploads/2024/05/cropped-favicon-270x270.png"
+    />
+    <meta
+      name="description"
+      content="Kavyos delivers specialized talent for AI-driven enterprise platforms including Salesforce, Actimize AML, and Databricks."
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-0RQLLQSMZN"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-0RQLLQSMZN");
+    </script>
+    <meta
+      name="google-site-verification"
+      content="TgVMTEGKpzoAvoRz0EG9woRxn0ZXaPPQAHYZroeIoKs"
+    />
+  </head>
+
+  <body
+    class="home page-template page-template-template-home page-template-template-home-php page page-id-6 wp-embed-responsive"
+  >
+    <div class="site-wrapper">
+      <!-- shadcn Navbar1 -->
+      <header class="snb-header" id="JS-site-header">
+        <div class="snb-inner">
+          <!-- Logo -->
+          <a href="/" class="snb-brand">
+            <img src="images/kavyos-logo.png" class="snb-brand__logo" alt="Kavyos" />
+          </a>
+
+          <!-- Desktop links -->
+          <ul class="snb-links">
+            <li><a href="#" target="_blank" class="snb-link">Open Jobs</a></li>
+            <li><a href="solutions.html" class="snb-link">Solutions</a></li>
+            <li><a href="about.html" class="snb-link">About Us</a></li>
+            <li><a href="#contact" class="snb-link">Contact Us</a></li>
+          </ul>
+
+          <!-- Desktop auth -->
+          <div class="snb-auth">
+            <a href="#contact" class="button button--primary" style="padding-block: 10px 8px; padding-inline: 24px; font-size: 0.8125rem;">Request Talent</a>
+          </div>
+
+          <!-- Mobile hamburger -->
+          <button
+            class="snb-menu-btn"
+            id="snb-menu-open"
+            aria-label="Open menu"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Backdrop overlay -->
+        <div class="snb-overlay" id="snb-overlay"></div>
+
+        <!-- Mobile sheet drawer -->
+        <div class="snb-sheet" id="snb-sheet">
+          <div class="snb-sheet__header">
+            <a href="/" class="snb-brand">
+              <img src="images/kavyos-logo.png" class="snb-brand__logo" alt="Kavyos" />
+            </a>
+            <button
+              class="snb-close-btn"
+              id="snb-menu-close"
+              aria-label="Close menu"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="snb-sheet__body">
+            <ul class="snb-sheet__links">
+              <li>
+                <a href="#" target="_blank" class="snb-sheet__link">Open Jobs</a>
+              </li>
+              <li>
+                <a href="#solutions" class="snb-sheet__link">Solutions</a>
+              </li>
+              <li><a href="about.html" class="snb-sheet__link">About Us</a></li>
+              <li><a href="#contact" class="snb-sheet__link">Contact Us</a></li>
+            </ul>
+            <div class="snb-sheet__footer">
+              <a href="#contact" class="button button--primary" style="width: 100%; justify-content: center;">Request Talent</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!--Model Popup Start-->
+      <div class="app-popup-main">
+        <span class="app-m-overlay appmodel-close"></span>
+        <div class="app-popup-inner">
+          <button class="m-close-btn appmodel-close">
+            Close
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.0277 14.1667L5.69434 5.83337M14.0277 5.83337L5.69434 14.1667"
+                stroke="#263040"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+            </svg>
+          </button>
+          <div class="app-popup">
+            <div class="appmodel-top tttt">
+              <a
+                href="https://unboundxinc.com"
+                class="model-logo"
+                target="_blank"
+              >
+                <img
+                  src="images/model-logo.svg"
+                  class="desktop-view"
+                  width="270"
+                  height="67"
+                  alt="Unboundxinc"
+                />
+                <img
+                  src="images/model-logo.svg"
+                  class="mobile-view"
+                  width="146"
+                  height="36"
+                  alt="Unboundxinc"
+                />
+              </a>
+              <!-- <span class="csi-text">Connect. Share. Invest.</span> -->
+            </div>
+            <div class="app-middle">
+              <div class="app-screens">
+                <img
+                  src="images/app-devices.png"
+                  class="desktop-view"
+                  width="300"
+                  height="200"
+                  alt="Unboundxinc"
+                />
+                <img
+                  src="images/app-small-devices.png"
+                  class="mobile-view"
+                  width="430"
+                  height="260"
+                  alt="Unboundxinc"
+                />
+              </div>
+              <div class="app-content">
+                <h2>Open Beta is Here!</h2>
+                <p>
+                  Contact us today to request top talent for your enterprise needs.
+                </p>
+                <a href="#" target="_blank" class="refer-friend-link"
+                  >Refer friends and get up to $200.</a
+                >
+              </div>
+            </div>
+            <div class="download-app">
+              <div class="d-app-title">
+                Download <span class="hide-small">the Application</span> Now!
+              </div>
+              <div class="download-app-s-g-pay">
+                <a href="https://www.apple.com/in/app-store" target="_blank">
+                  <img
+                    src="images/app-store.svg"
+                    width="162"
+                    height="48"
+                    alt="App Store"
+                  />
+                </a>
+                <a href="https://play.google.com/store" target="_blank">
+                  <img
+                    src="images/play-store.svg"
+                    width="162"
+                    height="48"
+                    alt="Google Play"
+                  />
+                </a>
+              </div>
+              <div class="text-policy-info">
+                Rewards subject to eligibility and verification; see Terms of
+                Use, Privacy Policy, and Legal Center. Apple & Google are not
+                sponsors of this promotion.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Model Popup End-->
+
+      <!--Model Popup Open/Close Script Start-->
+      <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+          const joinBtn = document.querySelector(".joinus-btn");
+          if (joinBtn) {
+            joinBtn.addEventListener("click", () => {
+              document.body.classList.add("appmodel-popup");
+            });
+          }
+
+          const appmodelClose = document.querySelectorAll(".appmodel-close");
+          if (appmodelClose.length > 0) {
+            appmodelClose.forEach((btn) => {
+              btn.addEventListener("click", () => {
+                document.body.classList.remove("appmodel-popup");
+              });
+            });
+          }
+
+          //After Load Website 10 second open model popup
+          setTimeout(() => {
+            document.querySelector(".js-popup-open .js-popup-open").click();
+          }, 10000);
+        });
+      </script>
+      <!--Model Popup Open/Close Script End-->
+
+      <main id="content">
+        <div class="section-sticky section-sticky--first JS-sticky-section">
+          <div class="curtain"></div>
+
+          <section class="home-hero">
+            <div class="home-hero__wrapper">
+              <h2 class="home-hero__heading">
+                Build – High Impact Teams In<br /><span id="typewriter-word">Databricks</span><span class="typewriter-dot"></span>
+              </h2>
+
+              <div class="home-hero__inner">
+                <div class="home-hero__section home-hero__section--center">
+                  <p class="home-hero__description">
+                    Kavyos connects organizations with highly specialized
+                    technology professionals—quickly, reliably, and built for
+                    long-term success.
+                  </p>
+
+                  <div class="download-app-s-g-pay">
+                    <a href="#" class="button button--primary"
+                      >Request Talent</a
+                    >
+                    <a href="#" class="button button--secondary btn-glow"
+                      >Our Solutions</a
+                    >
+                  </div>
+
+                  <div class="home-hero__image js-hero-image" style="display:flex;justify-content:center;align-items:center;">
+                    <img
+                      src="images/2323.png"
+                      alt=""
+                      style="max-width:50%;height:auto;display:block;margin:0 auto;"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ── Core Practice Areas ── -->
+        <section class="cpa-section" id="solutions">
+          <div class="cpa-inner">
+            <p class="cpa-eyebrow">What We Place</p>
+            <h2 class="cpa-heading">Core Practice Areas</h2>
+            <p class="cpa-sub">Deep specialization across the platforms and disciplines that drive modern enterprises.</p>
+            <div class="cpa-grid">
+
+              <!-- Databricks -->
+              <div class="cpa-card cpa-card--featured" data-sal="slide-up" data-sal-delay="0" data-sal-duration="700">
+                <img src="images/sol-databricks.jpg" alt="" class="cpa-card__bg-img" aria-hidden="true">
+                <div class="cpa-icon">
+                  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="20,4 36,13 36,27 20,36 4,27 4,13" fill="#E8F0FE" stroke="#007bff" stroke-width="1.5"/><polygon points="20,10 30,16 30,26 20,32 10,26 10,16" fill="#007bff" opacity="0.15"/><line x1="20" y1="4" x2="20" y2="36" stroke="#007bff" stroke-width="1.5"/><line x1="4" y1="13" x2="36" y2="27" stroke="#007bff" stroke-width="1.5"/><line x1="36" y1="13" x2="4" y2="27" stroke="#007bff" stroke-width="1.5"/></svg>
+                </div>
+                <h3 class="cpa-card__title">Databricks</h3>
+                <ul class="cpa-card__list">
+                  <li>Data Engineers</li>
+                  <li>ML Engineers</li>
+                  <li>PySpark / Spark Developers</li>
+                  <li>Lakehouse Migration</li>
+                  <li>AI / Analytics Teams</li>
+                </ul>
+              </div>
+
+              <!-- AML / Actimize -->
+              <div class="cpa-card" data-sal="slide-up" data-sal-delay="100" data-sal-duration="700">
+                <div class="cpa-icon">
+                  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="32" height="32" rx="6" fill="#E8F0FE" stroke="#007bff" stroke-width="1.5"/><path d="M12 28 L20 12 L28 28" stroke="#007bff" stroke-width="2" stroke-linejoin="round" fill="none"/><line x1="14.5" y1="23" x2="25.5" y2="23" stroke="#007bff" stroke-width="1.5"/><circle cx="20" cy="11" r="2" fill="#007bff"/></svg>
+                </div>
+                <h3 class="cpa-card__title">AML / Actimize Experts</h3>
+                <ul class="cpa-card__list">
+                  <li>NICE Actimize SMEs</li>
+                  <li>RCM / IFM</li>
+                  <li>Compliance Tech</li>
+                  <li>Fraud / KYC</li>
+                </ul>
+              </div>
+
+              <!-- Salesforce -->
+              <div class="cpa-card" data-sal="slide-up" data-sal-delay="200" data-sal-duration="700">
+                <div class="cpa-icon">
+                  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 6 C13 6 8 11 8 17 C8 20 9.5 22.5 12 24 L12 30 L16 28 C17.3 28.4 18.6 28.6 20 28.6 C27 28.6 32 23.6 32 17 C32 11 27 6 20 6Z" fill="#E8F0FE" stroke="#007bff" stroke-width="1.5"/><circle cx="14" cy="17" r="2" fill="#007bff"/><circle cx="20" cy="17" r="2" fill="#007bff"/><circle cx="26" cy="17" r="2" fill="#007bff"/></svg>
+                </div>
+                <h3 class="cpa-card__title">Salesforce</h3>
+                <ul class="cpa-card__list">
+                  <li>Apex Developers</li>
+                  <li>Architects</li>
+                  <li>Admins</li>
+                  <li>Service / Sales / Marketing Cloud</li>
+                </ul>
+              </div>
+
+              <!-- General IT Staffing -->
+              <div class="cpa-card" data-sal="slide-up" data-sal-delay="300" data-sal-duration="700">
+                <div class="cpa-icon">
+                  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="8" width="28" height="20" rx="3" fill="#E8F0FE" stroke="#007bff" stroke-width="1.5"/><line x1="20" y1="28" x2="20" y2="34" stroke="#007bff" stroke-width="1.5"/><line x1="13" y1="34" x2="27" y2="34" stroke="#007bff" stroke-width="2"/><polyline points="12,19 16,15 20,19 24,13 28,19" fill="none" stroke="#007bff" stroke-width="1.8" stroke-linejoin="round"/></svg>
+                </div>
+                <h3 class="cpa-card__title">General IT Staffing</h3>
+                <ul class="cpa-card__list">
+                  <li>PMs &amp; BAs</li>
+                  <li>DevOps</li>
+                  <li>Cloud Engineers</li>
+                  <li>SQL / Java / Python</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </section>
+        <!-- ── End Core Practice Areas ── -->
+
+        <div class="section-after-sticky">
+          <div class="media-large" data-sal="slide-up" data-sal-duration="1000">
+            <video
+              class="vdeo-dataset"
+              autoplay=""
+              playsinline=""
+              loop=""
+              muted=""
+              preload="auto"
+            >
+              <source
+                src="images/whoweare.mp4"
+                type="video/mp4"
+              />
+            </video>
+
+            <div class="media-large__text">
+              <p>Who We Are</p>
+              <div class="tagline-text">
+                We are a technology staffing partner focused on delivering
+                high-impact talent across AI-driven enterprise platforms
+                including Salesforce, Actimize, and Databricks.<br /><br />We
+                don't just fill roles—we deliver professionals who can execute
+                from day one.
+              </div>
+              <div style="text-align: center; margin-top: 20px">
+                <a
+                  href="about.html"
+                  class="button button--primary"
+                  style="
+                    display: inline-block;
+                    padding: 10px 28px;
+                    font-size: 14px;
+                    width: auto;
+                  "
+                  >Read More</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Logo Cloud -->
+          <section class="lc-section">
+            <p class="lc-label">Trusted by experts. Used by the leaders.</p>
+            <div class="lc-divider"></div>
+            <div class="lc-track-wrap">
+              <div class="lc-track" id="lc-track">
+                <!-- logos injected by JS -->
+              </div>
+            </div>
+            <div class="lc-divider"></div>
+          </section>
+          <!-- End Logo Cloud -->
+
+          <!-- ── Featured Practice Sections: Databricks + Actimize ── -->
+          <section class="tbf-wrap">
+            <div class="tbf-bg" aria-hidden="true"></div>
+            <div class="tbf-overlay" aria-hidden="true"></div>
+
+            <div class="text-blocks tbf-blocks">
+
+              <!-- Databricks Focus -->
+              <div class="text-blocks__section tbf-section" data-sal="slide-up" data-sal-delay="200" data-sal-duration="1000">
+                <div class="text-blocks__section__inner">
+                  <p style="font-size:0.85rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#007bff;margin-bottom:12px;">
+                    Databricks Focus
+                  </p>
+                  <h3 class="text-blocks__section__heading">Hire Databricks Experts Who Deliver</h3>
+                  <p class="text-blocks__section__text" style="margin-bottom:18px;">
+                    We provide vetted Databricks professionals for:
+                  </p>
+                  <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+                    <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.925rem;color:#374151;line-height:1.5;"><span style="width:7px;height:7px;border-radius:50%;background:#007bff;flex-shrink:0;margin-top:7px;"></span>Lakehouse Implementation</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.925rem;color:#374151;line-height:1.5;"><span style="width:7px;height:7px;border-radius:50%;background:#007bff;flex-shrink:0;margin-top:7px;"></span>Data Pipelines &amp; Delta Live Tables</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.925rem;color:#374151;line-height:1.5;"><span style="width:7px;height:7px;border-radius:50%;background:#007bff;flex-shrink:0;margin-top:7px;"></span>AI / ML Enablement</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.925rem;color:#374151;line-height:1.5;"><span style="width:7px;height:7px;border-radius:50%;background:#007bff;flex-shrink:0;margin-top:7px;"></span>Unity Catalog &amp; Governance</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.925rem;color:#374151;line-height:1.5;"><span style="width:7px;height:7px;border-radius:50%;background:#007bff;flex-shrink:0;margin-top:7px;"></span>Cost Optimization</li>
+                    <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.925rem;color:#374151;line-height:1.5;"><span style="width:7px;height:7px;border-radius:50%;background:#007bff;flex-shrink:0;margin-top:7px;"></span>Migration from Snowflake / Hadoop / Legacy Warehouses</li>
+                  </ul>
+                  <a href="solutions.html#sol-databricks" style="display:inline-flex;align-items:center;gap:6px;margin-top:22px;font-size:0.875rem;font-weight:600;color:#007bff;text-decoration:none;letter-spacing:0.01em;">
+                    Know More
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#007bff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+                <div class="text-blocks__section__image tbf-img-wrap">
+                  <div class="tbf-photo-frame">
+                    <img src="images/data.gif" alt="Databricks data animation" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="tbf-divider" aria-hidden="true"></div>
+
+              <!-- Actimize Talent & Solutions -->
+              <div class="text-blocks__section tbf-section" data-sal="slide-up" data-sal-delay="200" data-sal-duration="1000">
+                <div class="text-blocks__section__inner">
+                  <p style="font-size:0.85rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:#007bff;margin-bottom:12px;">
+                    Actimize Talent &amp; Solutions
+                  </p>
+                  <h3 class="text-blocks__section__heading">Hire Proven NICE Actimize Experts Who Understand Financial Crime Technology</h3>
+                  <p class="text-blocks__section__text">
+                    Kavyos provides specialized Actimize staffing and consulting solutions for banks, fintechs, insurance firms, and regulated enterprises that need experienced professionals who can deliver quickly in complex compliance environments.
+                  </p>
+                  <p class="text-blocks__section__text" style="margin-top:14px;">
+                    We understand that Actimize talent is highly niche and difficult to source. Our network includes professionals with real-world experience across implementation, enhancements, upgrades, production support, and regulatory transformation initiatives.
+                  </p>
+                  <a href="solutions.html#sol-actimize" style="display:inline-flex;align-items:center;gap:6px;margin-top:22px;font-size:0.875rem;font-weight:600;color:#007bff;text-decoration:none;letter-spacing:0.01em;">
+                    Know More
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#007bff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                </div>
+                <div class="text-blocks__section__image tbf-img-wrap">
+                  <div class="tbf-photo-frame tbf-photo-frame--zoomed-out">
+                    <img src="images/nice.gif" alt="NICE Actimize animation" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+          <!-- ── End Featured Practice Sections ── -->
+
+          <section class="text-blocks">
+            <div
+              class="text-blocks__section"
+              data-sal="slide-up"
+              data-sal-delay="200"
+              data-sal-duration="1000"
+            >
+              <div class="text-blocks__section__inner">
+                <p
+                  style="
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    letter-spacing: 0.12em;
+                    text-transform: uppercase;
+                    color: #007bff;
+                    margin-bottom: 12px;
+                  "
+                >
+                  Core Services
+                </p>
+                <h3 class="text-blocks__section__heading">Contract Staffing</h3>
+
+                <p class="text-blocks__section__text">
+                  Flexible talent for project-based and urgent needs. We rapidly
+                  source pre-vetted technology professionals who integrate
+                  seamlessly into your team and deliver results from day one.
+                </p>
+              </div>
+
+              <div class="text-blocks__section__image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 380" width="420" height="380" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="cs-bg" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#EEF4FF"/><stop offset="100%" stop-color="#D0E6FF"/>
+                    </linearGradient>
+                    <linearGradient id="cs-card" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#F2F7FF"/>
+                    </linearGradient>
+                    <linearGradient id="cs-tab" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#3A9BFF"/><stop offset="100%" stop-color="#0060D6"/>
+                    </linearGradient>
+                    <linearGradient id="cs-clock" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#3A9BFF"/><stop offset="100%" stop-color="#0060D6"/>
+                    </linearGradient>
+                    <filter id="cs-glow" x="-30%" y="-30%" width="160%" height="160%">
+                      <feDropShadow dx="0" dy="3" stdDeviation="8" flood-color="#007BFF" flood-opacity="0.28"/>
+                    </filter>
+                    <filter id="cs-card-shadow" x="-5%" y="-5%" width="110%" height="110%">
+                      <feDropShadow dx="2" dy="6" stdDeviation="10" flood-color="#1A3A6E" flood-opacity="0.1"/>
+                    </filter>
+                  </defs>
+                  <rect x="60" y="40" width="300" height="300" rx="24" fill="url(#cs-bg)"/>
+                  <rect x="72" y="52" width="276" height="276" rx="20" fill="#DAE9FF" opacity="0.45"/>
+                  <rect x="106" y="88" width="220" height="260" rx="12" fill="#C5D8F8" opacity="0.35"/>
+                  <rect x="100" y="80" width="220" height="260" rx="12" fill="url(#cs-card)" stroke="#C7D9FF" stroke-width="1.5" filter="url(#cs-card-shadow)"/>
+                  <rect x="160" y="64" width="100" height="28" rx="8" fill="url(#cs-tab)"/>
+                  <rect x="124" y="130" width="80"  height="10" rx="5" fill="#B4CEFF"/>
+                  <rect x="124" y="152" width="130" height="10" rx="5" fill="#C7D9FF"/>
+                  <rect x="124" y="174" width="100" height="10" rx="5" fill="#B4CEFF"/>
+                  <rect x="124" y="196" width="58"  height="10" rx="5" fill="#D6E5FF"/>
+                  <circle cx="290" cy="270" r="42" fill="url(#cs-clock)" filter="url(#cs-glow)"/>
+                  <circle cx="290" cy="270" r="34" fill="#fff"/>
+                  <line x1="290" y1="239" x2="290" y2="244" stroke="#C7D9FF" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="321" y1="270" x2="316" y2="270" stroke="#C7D9FF" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="290" y1="301" x2="290" y2="296" stroke="#C7D9FF" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="259" y1="270" x2="264" y2="270" stroke="#C7D9FF" stroke-width="2" stroke-linecap="round"/>
+                  <line class="tb-clock-hr" x1="290" y1="270" x2="306" y2="278" stroke="#007BFF" stroke-width="3.5" stroke-linecap="round" opacity="0.65"/>
+                  <line class="tb-clock-min" x1="290" y1="270" x2="290" y2="249" stroke="#007BFF" stroke-width="3.5" stroke-linecap="round"/>
+                  <circle cx="290" cy="270" r="4" fill="#007BFF"/>
+                </svg>
+              </div>
+            </div>
+
+            <div
+              class="text-blocks__section"
+              data-sal="slide-up"
+              data-sal-delay="200"
+              data-sal-duration="1000"
+            >
+              <div class="text-blocks__section__inner">
+                <h3 class="text-blocks__section__heading">Direct Hire</h3>
+
+                <p class="text-blocks__section__text">
+                  Permanent hires aligned with your long-term vision. We
+                  identify and deliver top-tier technology professionals who are
+                  the right cultural and technical fit for your organization.
+                </p>
+              </div>
+
+              <div class="text-blocks__section__image">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 380" width="420" height="380" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="dh-bg" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#EEF4FF"/><stop offset="100%" stop-color="#D0E6FF"/>
+                    </linearGradient>
+                    <radialGradient id="dh-sil" cx="50%" cy="40%" r="60%">
+                      <stop offset="0%" stop-color="#D4E4FF"/><stop offset="100%" stop-color="#B0CAFF"/>
+                    </radialGradient>
+                    <radialGradient id="dh-head" cx="50%" cy="40%" r="60%">
+                      <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#EEF4FF"/>
+                    </radialGradient>
+                    <linearGradient id="dh-badge" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#3A9BFF"/><stop offset="100%" stop-color="#0060D6"/>
+                    </linearGradient>
+                    <filter id="dh-badge-glow" x="-40%" y="-40%" width="180%" height="180%">
+                      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#007BFF" flood-opacity="0.38"/>
+                    </filter>
+                    <filter id="dh-person-shadow" x="-10%" y="-10%" width="120%" height="120%">
+                      <feDropShadow dx="2" dy="5" stdDeviation="8" flood-color="#1A3A6E" flood-opacity="0.1"/>
+                    </filter>
+                  </defs>
+                  <rect x="60" y="40" width="300" height="300" rx="24" fill="url(#dh-bg)"/>
+                  <rect x="72" y="52" width="276" height="276" rx="20" fill="#DAE9FF" opacity="0.4"/>
+                  <circle cx="210" cy="145" r="52" fill="url(#dh-sil)" filter="url(#dh-person-shadow)"/>
+                  <circle cx="210" cy="138" r="34" fill="url(#dh-head)"/>
+                  <ellipse cx="210" cy="210" rx="58" ry="36" fill="#D8E8FF"/>
+                  <g class="tb-badge-g">
+                    <circle cx="310" cy="110" r="34" fill="url(#dh-badge)" filter="url(#dh-badge-glow)"/>
+                    <polyline class="tb-checkmark" points="295,110 306,122 328,98" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <rect x="100" y="262" width="220" height="12" rx="6" fill="#C7D9FF"/>
+                  <rect x="120" y="284" width="160" height="10" rx="5" fill="#D8E8FF"/>
+                </svg>
+              </div>
+            </div>
+
+          </section>
+
+
+          <section
+            class="text-boxes-placeholder" style="display: none"
+          >
+            <!-- text-boxes placeholder -->
+          </section>
+
+
+
+          <div id="JS-quotes-container" class="quotes" style="display:none;height:0;">
+            <div class="quotes__background JS-quotes-background"></div>
+            <div class="quotes__background JS-quotes-background"></div>
+            <div class="quotes__items-wrapper">
+              <div class="quotes__items">
+                <div id="JS-quotes" class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="quotes__item">
+                        <p class="quotes__item__text"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="section-gradient section-sticky JS-sticky-section" style="background: #ffffff; background-color: #ffffff;">
+          <style>
+            /* ── Contact Section ── */
+            .kv-contact {
+              padding: 100px clamp(1.5rem, 5vw, 5rem);
+              background: #060f22;
+              position: relative;
+              overflow: hidden;
+            }
+            .kv-contact::before {
+              content: "";
+              position: absolute;
+              top: -120px; left: -120px;
+              width: 520px; height: 520px;
+              background: radial-gradient(circle, rgba(0,123,255,0.18) 0%, transparent 70%);
+              pointer-events: none;
+            }
+            .kv-contact::after {
+              content: "";
+              position: absolute;
+              bottom: -80px; right: -80px;
+              width: 400px; height: 400px;
+              background: radial-gradient(circle, rgba(99,179,255,0.10) 0%, transparent 70%);
+              pointer-events: none;
+            }
+            .kv-contact__inner {
+              max-width: 1180px;
+              margin: 0 auto;
+              display: grid;
+              grid-template-columns: 1fr 1.4fr;
+              gap: 72px;
+              align-items: start;
+              position: relative;
+              z-index: 1;
+            }
+            .kv-contact__eyebrow {
+              font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em;
+              text-transform: uppercase; color: #60a5fa; margin-bottom: 12px;
+            }
+            .kv-contact__heading {
+              font-size: clamp(2rem, 3.5vw, 2.8rem);
+              font-weight: 500; color: #fff;
+              margin: 0 0 16px; line-height: 1.15;
+            }
+            .kv-contact__sub {
+              font-size: 1rem; color: rgba(255,255,255,0.55);
+              line-height: 1.75; margin: 0 0 44px;
+              max-width: 380px;
+            }
+            .kv-contact__items { display: flex; flex-direction: column; gap: 20px; }
+            .kv-contact__item {
+              display: flex; align-items: center; gap: 16px;
+              text-decoration: none; color: rgba(255,255,255,0.82);
+              font-size: 1rem;
+              transition: color 0.15s;
+            }
+            .kv-contact__item:hover { color: #fff; }
+            .kv-contact__item-icon {
+              width: 44px; height: 44px; border-radius: 12px;
+              background: rgba(0,123,255,0.15);
+              border: 1px solid rgba(0,123,255,0.3);
+              display: flex; align-items: center; justify-content: center;
+              flex-shrink: 0;
+            }
+            .kv-contact__item-icon svg { width: 20px; height: 20px; }
+            .kv-contact__socials {
+              display: flex; gap: 12px; margin-top: 40px;
+            }
+            .kv-contact__social {
+              width: 40px; height: 40px; border-radius: 10px;
+              background: rgba(255,255,255,0.07);
+              border: 1px solid rgba(255,255,255,0.12);
+              display: flex; align-items: center; justify-content: center;
+              transition: background 0.2s, border-color 0.2s;
+            }
+            .kv-contact__social:hover { background: rgba(0,123,255,0.2); border-color: rgba(0,123,255,0.5); }
+            .kv-contact__social img { width: 20px; height: 20px; }
+            /* Form card */
+            .kv-contact__form-card {
+              background: rgba(255,255,255,0.04);
+              border: 1px solid rgba(255,255,255,0.10);
+              border-radius: 20px;
+              padding: 40px;
+            }
+            .kv-form { display: flex; flex-direction: column; gap: 16px; }
+            .kv-form__row { display: flex; gap: 16px; }
+            .kv-form__row--full { flex-direction: column; }
+            .kv-form input[type="text"],
+            .kv-form input[type="email"],
+            .kv-form input[type="tel"],
+            .kv-form select,
+            .kv-form textarea {
+              width: 100%;
+              background: rgba(255,255,255,0.06);
+              border: 1px solid rgba(255,255,255,0.14);
+              border-radius: 10px;
+              padding: 11px 14px;
+              font-size: 0.875rem !important;
+              color: #fff;
+              font-family: inherit;
+              transition: border-color 0.2s, background 0.2s;
+              outline: none;
+            }
+            .kv-form input::placeholder,
+            .kv-form textarea::placeholder { color: rgba(255,255,255,0.35); font-size: 0.875rem; }
+            .kv-form select { color: rgba(255,255,255,0.55); cursor: pointer; }
+            .kv-form select option { background: #0d1b33; color: #fff; }
+            .kv-form input:focus,
+            .kv-form select:focus,
+            .kv-form textarea:focus {
+              border-color: rgba(0,123,255,0.6);
+              background: rgba(0,123,255,0.07);
+            }
+            .kv-form textarea { resize: vertical; min-height: 110px; }
+            .kv-form__acceptance {
+              display: flex; align-items: flex-start; gap: 10px;
+              font-size: 0.82rem; color: rgba(255,255,255,0.5);
+              line-height: 1.5; cursor: pointer;
+            }
+            .kv-form__acceptance input[type="checkbox"] { margin-top: 2px; flex-shrink: 0; accent-color: #007bff; }
+            .kv-form__submit {
+              width: 100%;
+              background: #007bff; color: #fff;
+              border: none; border-radius: 10px;
+              padding: 14px 24px;
+              font-size: 0.9375rem; font-weight: 500;
+              font-family: inherit; cursor: pointer;
+              transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+            }
+            .kv-form__submit:hover {
+              background: #0062cc;
+              transform: translateY(-1px);
+              box-shadow: 0 8px 24px rgba(0,123,255,0.35);
+            }
+            @media (max-width: 860px) {
+              .kv-contact__inner { grid-template-columns: 1fr; gap: 48px; }
+              .kv-form__row { flex-direction: column; }
+            }
+          </style>
+
+          <section id="contact" class="kv-contact">
+            <div class="kv-contact__inner">
+
+              <!-- Left: info -->
+              <div>
+                <p class="kv-contact__eyebrow">Get In Touch</p>
+                <h2 class="kv-contact__heading">Contact Us</h2>
+                <p class="kv-contact__sub">Ready to build a high-impact team? Reach out and we'll get back to you promptly.</p>
+
+                <div class="kv-contact__items">
+                  <a href="tel:+16464505955" class="kv-contact__item">
+                    <span class="kv-contact__item-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.81 19.79 19.79 0 01.09 2.18 2 2 0 012.08 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    </span>
+                    +1 (646) 450-5955
+                  </a>
+
+                  <a href="mailto:Accounts@kavyos.com" class="kv-contact__item">
+                    <span class="kv-contact__item-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </span>
+                    Accounts@kavyos.com
+                  </a>
+
+                  <div class="kv-contact__item" style="cursor:default;">
+                    <span class="kv-contact__item-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </span>
+                    <span>197 Route 18 Suite 210 N,<br/>East Brunswick NJ 08816</span>
+                  </div>
+                </div>
+
+                <div class="kv-contact__socials">
+                  <span class="kv-contact__social">
+                    <img src="images/facebook.svg" alt="Facebook" />
+                  </span>
+                  <span class="kv-contact__social">
+                    <img src="images/twitter.svg" alt="X" />
+                  </span>
+                  <span class="kv-contact__social">
+                    <img src="images/linkedin.svg" alt="LinkedIn" />
+                  </span>
+                </div>
+
+                <div style="margin-top:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);">
+                  <p style="font-size:0.7rem;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin:0 0 10px;">Careers</p>
+                  <p style="font-size:1.25rem;font-weight:400;color:#fff;margin:0 0 14px;line-height:1.35;">Want to join us?</p>
+                  <a href="mailto:careers@kavyos.com" class="kv-contact__item" style="display:inline-flex;">
+                    <span class="kv-contact__item-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </span>
+                    careers@kavyos.com
+                  </a>
+                </div>
+
+              </div>
+
+              <!-- Right: form -->
+              <div class="kv-contact__form-card">
+                <form class="kv-form" action="/#wpcf7-f180-o1" method="post" aria-label="Contact form" novalidate>
+                  <div class="kv-form__row">
+                    <input type="text" name="your-name" placeholder="Name*" required maxlength="400" />
+                    <input type="email" name="your-email" placeholder="E-mail*" required maxlength="400" />
+                  </div>
+                  <input type="tel" name="your-phone" placeholder="Phone number" maxlength="400" />
+                  <textarea name="your-message" placeholder="Your message" maxlength="2000"></textarea>
+                  <label class="kv-form__acceptance">
+                    <input type="checkbox" name="acceptance-186" value="1" />
+                    I agree with the Terms and Conditions and Privacy Policy
+                  </label>
+                  <button type="submit" class="kv-form__submit">Send Message</button>
+                </form>
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver(
+              (entries) => {
+                entries.forEach((entry) => {
+                  const video = entry.target;
+                  const source = video.querySelector("source");
+
+                  if (!entry.isIntersecting) {
+                    video.pause();
+                    return;
+                  }
+
+                  if (!source || source.src) {
+                    // already loaded
+                    video.play().catch(() => {});
+                    return;
+                  }
+
+                  const dataSrc = source.dataset.src;
+                  if (!dataSrc) return;
+
+                  source.src = dataSrc;
+                  video.load();
+
+                  video.muted = true;
+                  video.playsInline = true;
+                  video.loop = true;
+
+                  video.addEventListener("ended", () => {
+                    video.currentTime = 0;
+                    video.play().catch(() => {});
+                  });
+
+                  video.play().catch(() => {});
+                });
+              },
+              { threshold: 0.5 },
+            );
+
+            document.querySelectorAll(".vdeo-dataset").forEach((video) => {
+              observer.observe(video);
+            });
+          });
+        </script>
+      </main>
+
+      <footer class="kv-footer">
+        <style>
+          .kv-footer {
+            background: #060f22;
+            color: rgba(255,255,255,0.75);
+            font-family: inherit;
+          }
+          .kv-footer__top {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 64px clamp(1.5rem, 4vw, 3rem) 48px;
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr 1.4fr;
+            gap: 48px;
+          }
+          .kv-footer__brand-logo {
+            height: 30px;
+            width: auto;
+            display: block;
+            margin-bottom: 18px;
+            filter: brightness(0) invert(1);
+            opacity: 0.9;
+          }
+          .kv-footer__brand-desc {
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.55);
+            margin: 0 0 24px;
+            max-width: 280px;
+          }
+          .kv-footer__socials {
+            display: flex;
+            gap: 12px;
+          }
+          .kv-footer__social {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.15);
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            transition: border-color 0.2s, color 0.2s, background 0.2s;
+          }
+          .kv-footer__social:hover {
+            border-color: rgba(255,255,255,0.4);
+            color: #fff;
+            background: rgba(255,255,255,0.06);
+          }
+          .kv-footer__col-title {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            margin: 0 0 18px;
+          }
+          .kv-footer__links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+          .kv-footer__links a {
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.62);
+            text-decoration: none;
+            transition: color 0.15s;
+          }
+          .kv-footer__links a:hover { color: #fff; }
+          .kv-footer__contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.62);
+            line-height: 1.55;
+            margin-bottom: 14px;
+          }
+          .kv-footer__contact-item svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+            color: rgba(255,255,255,0.35);
+          }
+          .kv-footer__contact-item a {
+            color: rgba(255,255,255,0.62);
+            text-decoration: none;
+            transition: color 0.15s;
+          }
+          .kv-footer__contact-item a:hover { color: #fff; }
+          .kv-footer__bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+          }
+          .kv-footer__bottom-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px clamp(1.5rem, 4vw, 3rem);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+          }
+          .kv-footer__copy {
+            font-size: 0.8125rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.35);
+            margin: 0;
+          }
+          .kv-footer__bottom-links {
+            display: flex;
+            gap: 20px;
+          }
+          .kv-footer__bottom-links a {
+            font-size: 0.8125rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.35);
+            text-decoration: none;
+            transition: color 0.15s;
+          }
+          .kv-footer__bottom-links a:hover { color: rgba(255,255,255,0.7); }
+          @media (max-width: 900px) {
+            .kv-footer__top {
+              grid-template-columns: 1fr 1fr;
+              gap: 36px;
+            }
+          }
+          @media (max-width: 540px) {
+            .kv-footer__top {
+              grid-template-columns: 1fr;
+              gap: 32px;
+            }
+            .kv-footer__bottom-inner {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 10px;
+            }
+          }
+        </style>
+
+        <div class="kv-footer__top">
+          <!-- Brand -->
+          <div>
+            <img src="images/kavyos-logo.png" alt="Kavyos" class="kv-footer__brand-logo" />
+            <p class="kv-footer__brand-desc">Specialized talent and recruiting for the platforms shaping enterprise technology — Databricks, NICE Actimize, Salesforce, and more.</p>
+            <div class="kv-footer__socials">
+              <a href="#" class="kv-footer__social" aria-label="LinkedIn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="#" class="kv-footer__social" aria-label="Twitter / X">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+              </a>
+              <a href="#" class="kv-footer__social" aria-label="Facebook">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <p class="kv-footer__col-title">Company</p>
+            <ul class="kv-footer__links">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="solutions.html">Solutions</a></li>
+              <li><a href="#" target="_blank">Open Jobs</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Solutions -->
+          <div>
+            <p class="kv-footer__col-title">Practice Areas</p>
+            <ul class="kv-footer__links">
+              <li><a href="solutions.html#sol-databricks">Databricks</a></li>
+              <li><a href="solutions.html#sol-actimize">AML / Actimize</a></li>
+              <li><a href="solutions.html#sol-salesforce">Salesforce</a></li>
+              <li><a href="solutions.html">General IT Staffing</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <p class="kv-footer__col-title">Get in Touch</p>
+            <div class="kv-footer__contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91A16 16 0 0 0 15 15.91l.77-.77a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 17.32z"/></svg>
+              <a href="tel:+16464505955">+1 (646) 450-5955</a>
+            </div>
+            <div class="kv-footer__contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a href="mailto:Accounts@kavyos.com">Accounts@kavyos.com</a>
+            </div>
+            <div class="kv-footer__contact-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>197 Route 18 Suite 210 N,<br>East Brunswick NJ 08816</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="kv-footer__bottom">
+          <div class="kv-footer__bottom-inner">
+            <p class="kv-footer__copy">© <span id="kv-footer-year"></span> Kavyos. All rights reserved.</p>
+            <div class="kv-footer__bottom-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script>
+        document.getElementById("kv-footer-year").textContent = new Date().getFullYear();
+      </script>
+    </div>
+
+    <style type="text/css">
+      .ftr-tagline {
+        text-align: center;
+        padding: 0px 15px 50px 15px;
+        max-width: 830px;
+        margin: auto;
+        line-height: 1.5;
+      }
+      .zenith-ai-tagline {
+        font-size: 20px;
+        margin-bottom: 50px;
+        margin-top: -20px;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .ubverse-text-tagline {
+        font-size: 20px;
+        max-width: 900px;
+        margin: auto;
+        margin-top: 30px;
+      }
+      .textboxes-tagline {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 50px;
+      }
+      .media-large__text .tagline-text {
+        max-width: 600px;
+        margin: auto;
+        color: #fff;
+        text-align: center;
+        font-size: 20px;
+      }
+      .cta-text-tagline {
+        max-width: 500px;
+        margin: auto;
+        font-size: 20px;
+        margin-top: 30px;
+      }
+    </style>
+
+    <style>
+      .consent-message {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        text-align: center;
+        color: #666;
+        /* background-color: #f9f9f9; */
+        padding: 12px 20px;
+        border-radius: 8px;
+        border: 0px solid #e0e0e0;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .consent-message a {
+        color: #066bf0;
+        text-decoration: underline;
+        font-weight: 500;
+      }
+
+      .consent-message a:hover {
+        color: #004bb5;
+        text-decoration: none;
+      }
+    </style>
+
+    <div id="waitlist-popup" class="popup-wrapper js-popup" data-popup="">
+      <div class="popup">
+        <div class="popup__inner">
+          <button class="popup__close js-popup-close">
+            <svg
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="40px"
+              height="40px"
+              viewBox="0 0 357 357"
+              style="enable-background: new 0 0 357 357"
+              xml:space="preserve"
+            >
+              <g>
+                <g id="close">
+                  <polygon
+                    points="357,35.7 321.3,0 178.5,142.8 35.7,0 0,35.7 142.8,178.5 0,321.3 35.7,357 178.5,214.2 321.3,357 357,321.3 214.2,178.5"
+                  ></polygon>
+                </g>
+              </g>
+            </svg>
+          </button>
+
+          <div class="main-popup-column">
+            <div class="popup_column">
+              <div class="popup__content">
+                <div id="referrals-tab" class="tab-content active">
+                  <div class="popup_tab_content">
+                    <div class="popup__intro_title">
+                      <h2 class="ubverse__title">Start Referring Now</h2>
+
+                      <p class="ubverse__subtitle">
+                        Each referral boosts your rank and brings you closer to
+                        <span>exclusive perks.</span>
+                      </p>
+                    </div>
+                    <span class="popup__separator big-space">
+                      <img src="images/popup__separator.png" />
+                    </span>
+
+                    <div class="referral-link-share">
+                      <h3 class="copy-link-heading">
+                        Copy your link and/or manually share it on social media
+                        below.
+                      </h3>
+                      <div class="popup___refer-code">
+                        <div class="popup___refer-code__input">
+                          <p type="text" id="refer-code" class="refer-code"></p>
+                        </div>
+
+                        <div class="popup___refer_copy">
+                          <img
+                            id="refer-copy"
+                            class="refer-code-copy"
+                            src="images/refer-copy.svg"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="social-media">
+                        <ul class="popup__list__social">
+                          <li>
+                            <span social-item="twitter">
+                              <img
+                                class="share-to-social-media"
+                                src="images/twitter.svg"
+                                alt=""
+                              />
+                            </span>
+                          </li>
+                          <li>
+                            <span social-item="instagram">
+                              <img
+                                class="share-to-social-media"
+                                src="images/instagram.svg"
+                                alt=""
+                              />
+                            </span>
+                          </li>
+                          <li>
+                            <span social-item="reddit">
+                              <img
+                                class="share-to-social-media"
+                                src="images/reddit.svg"
+                                alt=""
+                              />
+                            </span>
+                          </li>
+                          <li>
+                            <span social-item="discord">
+                              <img
+                                class="share-to-social-media"
+                                src="images/discord.svg"
+                                alt=""
+                              />
+                            </span>
+                          </li>
+                          <li>
+                            <span social-item="facebook">
+                              <img
+                                class="share-to-social-media"
+                                src="images/facebook.svg"
+                                alt=""
+                              />
+                            </span>
+                          </li>
+                          <li>
+                            <span social-item="linkedin">
+                              <img
+                                class="share-to-social-media"
+                                src="images/linkedin.svg"
+                                alt=""
+                              />
+                            </span>
+                          </li>
+                          <li>
+                            <span social-item="email">
+                              <img
+                                class="share-to-social-media"
+                                src="images/email.svg"
+                                alt=""
+                              />
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="special-access">
+                      <div class="special-access-header">
+                        <div class="special-access-image">
+                          <img src="images/join-beta.svg" alt="" />
+                        </div>
+                        <div class="headings">
+                          <h3>
+                            Get Early Access to Top Talent: Join Kavyos
+                          </h3>
+                          <h4>Earn access. Reserve your username. Be first.</h4>
+                        </div>
+                      </div>
+
+                      <span class="popup__separator small-space">
+                        <img src="images/popup__separator.png" />
+                      </span>
+
+                      <ul class="list-items">
+                        <li>
+                          <span>Earn XP for Referrals:</span> Each successful
+                          invite boosts your XP score.
+                        </li>
+                        <li>
+                          <span>Rise in the Rankings:</span> Higher XP means a
+                          better spot on the leaderboard.
+                        </li>
+                        <li>
+                          <span>Top 250 Get Access:</span> The highest-ranked
+                          users get early entry this month.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div id="leaderboard-tab" class="tab-content">
+                  <div class="popup_tab_content">
+                    <div class="popup__intro_title">
+                      <h2 class="ubverse__title">
+                        Your Spot on the Leaderboard
+                      </h2>
+                      <p class="ubverse__subtitle">
+                        Track your rank and see how close you are to unlocking
+                        early <span>access and rewards.</span>
+                      </p>
+                    </div>
+                    <span class="popup__separator big-space">
+                      <img src="images/popup__separator.png" />
+                    </span>
+                    <div class="referral-progress">
+                      <div class="referral-box">
+                        <div class="referral-header">
+                          <div class="current-referrals-content">
+                            <div class="referral-header-titles">
+                              Successful referrals:
+                              <strong
+                                ><span class="total-referral-count"
+                                  >0</span
+                                ></strong
+                              >
+                            </div>
+                            <div class="referral-header-titles">
+                              XP accrued:
+                              <strong>
+                                <span class="total-xp-count"></span
+                              ></strong>
+                            </div>
+                          </div>
+                          <span class="popup__separator big-space">
+                            <img src="images/popup__separator.png" />
+                          </span>
+                        </div>
+
+                        <div class="progress-container">
+                          <div class="current-positions-container">
+                            <div class="current-positions">
+                              Your position
+                              <span class="current-tire-label"></span>
+                            </div>
+                            <div class="current-position-icon">
+                              <svg
+                                width="12"
+                                height="9"
+                                viewBox="0 0 12 9"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M5.27063 8.05253C5.63909 8.53116 6.36091 8.53116 6.72937 8.05253L11.7874 1.48191C12.2534 0.876654 11.8219 0 11.0581 0H0.941937C0.178116 0 -0.253354 0.876655 0.212572 1.48191L5.27063 8.05253Z"
+                                  fill="#263040"
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+
+                          <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                            <div class="progress-check">
+                              <span class="check-icon">
+                                <svg
+                                  width="18"
+                                  height="14"
+                                  viewBox="0 0 18 14"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M2 6.99968L6.66667 11.6663L16 2.33301"
+                                    stroke="white"
+                                    stroke-width="3.03333"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  ></path>
+                                </svg>
+                              </span>
+                            </div>
+                            <div class="progress-marker"></div>
+                          </div>
+                          <div class="progress-labels">
+                            <span class="start-label"
+                              ><span id="progress_labels_count">5</span>
+                              referrals</span
+                            >
+                            <span class="end-label">Eligible for beta</span>
+                          </div>
+                        </div>
+
+                        <span class="popup__separator small-space">
+                          <img src="images/popup__separator.png" />
+                        </span>
+
+                        <div class="referral-footer"></div>
+                      </div>
+                      <div class="draw-dates">
+                        <div class="date-item">
+                          <span class="date-label">Draw ends:</span>
+                          <span class="date-value" id="drow_end">June 2nd</span>
+                        </div>
+                        <div class="date-item">
+                          <span class="date-label">Next Draw:</span>
+                          <span class="date-value" id="next_drow"
+                            >July 10th</span
+                          >
+                        </div>
+                      </div>
+                      <div class="popup__form_link">
+                        <a
+                          onclick="openWinnerPopup('waitlist')"
+                          href="#winner-popup"
+                          class=""
+                          >Learn How Referrals = Access & Rewards
+                          <span class="arrow-icon">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              version="1.1"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              width="512"
+                              height="512"
+                              x="0"
+                              y="0"
+                              viewBox="0 0 492.004 492.004"
+                              style="enable-background: new 0 0 512 512"
+                              xml:space="preserve"
+                            >
+                              <g>
+                                <path
+                                  d="M484.14 226.886 306.46 49.202c-5.072-5.072-11.832-7.856-19.04-7.856-7.216 0-13.972 2.788-19.044 7.856l-16.132 16.136c-5.068 5.064-7.86 11.828-7.86 19.04 0 7.208 2.792 14.2 7.86 19.264L355.9 207.526H26.58C11.732 207.526 0 219.15 0 234.002v22.812c0 14.852 11.732 27.648 26.58 27.648h330.496L252.248 388.926c-5.068 5.072-7.86 11.652-7.86 18.864 0 7.204 2.792 13.88 7.86 18.948l16.132 16.084c5.072 5.072 11.828 7.836 19.044 7.836 7.208 0 13.968-2.8 19.04-7.872l177.68-177.68c5.084-5.088 7.88-11.88 7.86-19.1.016-7.244-2.776-14.04-7.864-19.12z"
+                                  fill="#066bf0"
+                                  opacity="1"
+                                  data-original="#000000"
+                                ></path>
+                              </g>
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <span class="popup__separator big-space">
+                  <img src="images/popup__separator.png" />
+                </span>
+
+                <div class="tabs">
+                  <div
+                    class="tab-link active"
+                    onclick="
+                      referralLeaderboardTabSwitch(event, 'referrals-tab')
+                    "
+                  >
+                    Referrals
+                  </div>
+                  <div
+                    class="tab-link"
+                    onclick="
+                      referralLeaderboardTabSwitch(event, 'leaderboard-tab')
+                    "
+                  >
+                    LeaderBoard
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="join-popup" class="app-popup-main">
+      <span class="app-m-overlay appmodel-close"> </span>
+      <div class="app-popup-inner">
+        <button class="m-close-btn appmodel-close" id="closePopup">
+          Close
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.0277 14.1667L5.69434 5.83337M14.0277 5.83337L5.69434 14.1667"
+              stroke="#263040"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+        </button>
+        <div class="app-popup">
+          <div class="appmodel-top">
+            <a
+              href="https://unboundxinc.com"
+              class="model-logo"
+              target="_blank"
+            >
+              <img
+                src="images/model-logo_1.svg"
+                class="desktop-view"
+                width="270"
+                height="67"
+                alt="Unboundxinc"
+              />
+              <img
+                src="images/model-logo_1.svg"
+                class="mobile-view"
+                width="146"
+                height="36"
+                alt="Unboundxinc"
+              />
+            </a>
+          </div>
+          <div class="app-middle">
+            <div class="app-screens">
+              <img
+                src="AppDevices.png.dontreplace"
+                class="desktop-view"
+                width="300"
+                height="200"
+                alt="Unboundxinc"
+              />
+              <img
+                src="app-small-devices.png.dontreplace"
+                class="mobile-view"
+                width="430"
+                height="260"
+                alt="Unboundxinc"
+              />
+            </div>
+            <div class="app-content">
+              <h2>Open Beta is Here!</h2>
+              <p>Contact Kavyos today to find the perfect talent for your enterprise.</p>
+              <a href="#" target="_blank" class="refer-friend-link"
+                >Refer friends and get up to $200.</a
+              >
+            </div>
+          </div>
+          <div class="download-app">
+            <div class="d-app-title">
+              Download <span class="hide-small">the Application</span> Now!
+            </div>
+            <div class="download-app-s-g-pay">
+              <a
+                href="https://apps.apple.com/us/app/unbound-x/id6745837250"
+                target="_blank"
+              >
+                <img
+                  src="images/app-store_1.svg"
+                  width="162"
+                  height="48"
+                  alt="App Store"
+                />
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.unboundx"
+                target="_blank"
+              >
+                <img
+                  src="images/play-store_1.svg"
+                  width="162"
+                  height="48"
+                  alt="Google Play"
+                />
+              </a>
+            </div>
+            <div class="text-policy-info">
+              Rewards subject to eligibility and verification; see
+              <a
+                target="_blank"
+                href="https://www.unboundxinc.com/terms-condition/"
+                >Terms of Use</a
+              >,
+              <a
+                target="_blank"
+                href="https://www.unboundxinc.com/privacy-policy/"
+                >Privacy Policy</a
+              >, and
+              <a href="https://www.unboundxinc.com/legal/" target="_blank"
+                >Legal Center</a
+              >. Apple & Google are not sponsors of this promotion.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="winner-popup" class="popup-wrapper js-popup" data-popup="">
+      <div class="popup">
+        <div class="popup__inner">
+          <button class="popup_back" onclick="backReferral()">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <mask
+                id="mask0_3639_362"
+                style="mask-type: alpha"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="40"
+                height="40"
+              >
+                <rect width="40" height="40" fill="#D9D9D9"></rect>
+              </mask>
+              <g mask="url(#mask0_3639_362)">
+                <path
+                  d="M19 30L9 20L19 10M10.3889 20H30.6667"
+                  stroke="black"
+                  stroke-width="3"
+                  stroke-miterlimit="10"
+                  stroke-linecap="square"
+                ></path>
+              </g>
+            </svg>
+          </button>
+
+          <div class="main-popup-column">
+            <div class="winner-popup-column">
+              <div class="popup__intro_title">
+                <h2 class="ubverse__title">Your XP Journey Starts Here</h2>
+              </div>
+
+              <div class="tabs">
+                <div
+                  class="tab-link active"
+                  onclick="winnerPopupTabChange(event, 'tab_0')"
+                >
+                  Rules
+                </div>
+                <div
+                  class="tab-link"
+                  onclick="winnerPopupTabChange(event, 'tab_1')"
+                >
+                  Winners Table
+                </div>
+              </div>
+
+              <div id="tab_0" class="tab-content active">
+                <div class="section-item">
+                  <div class="imagw-with-title">
+                    <img src="images/tiers-rewards.svg" alt="" />
+                    <h5 class="field-section-title">How The Waitlist Works</h5>
+                  </div>
+                  <div class="responsive-table-wrapper">
+                    <table border="0" class="winner-table">
+                      <thead>
+                        <tr>
+                          <th>Action</th>
+                          <th>XP Earned</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>Join the waitlist</th>
+                          <td>+5 XP</td>
+                        </tr>
+                        <tr>
+                          <th>Refer a friend (they sign up)</th>
+                          <td>+5 XP per friend</td>
+                        </tr>
+                        <tr>
+                          <th>Social media engagement</th>
+                          <td>+2 XP (follow + share)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="section-item">
+                  <div class="imagw-with-title">
+                    <img src="images/challengers-xp.svg" alt="" />
+                    <h5 class="field-section-title">
+                      How XP Affects Beta Access
+                    </h5>
+                  </div>
+                  <div class="responsive-table-wrapper">
+                    <table border="0" class="winner-table">
+                      <thead>
+                        <tr>
+                          <th>Your XP Rank</th>
+                          <th>Outcome</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>Top 250 XP earners</th>
+                          <td>Automatic beta access</td>
+                        </tr>
+                        <tr>
+                          <th>All remaining users</th>
+                          <td>Carried forward for next month’s access</td>
+                        </tr>
+                        <tr>
+                          <th>Everyone</th>
+                          <td>Keeps all XP earned, even if not selected</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="section-item">
+                  <div class="imagw-with-title">
+                    <img src="images/sharing-tools.svg" alt="" />
+                    <h5 class="field-section-title">
+                      Didn’t Get In? Here’s What’s Next
+                    </h5>
+                  </div>
+                  <ul class="list-items">
+                    <li>
+                      <span>Phase 2 Opens June 15:</span> The next 500 top XP
+                      earners will gain access.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="section-item">
+                  <div class="imagw-with-title">
+                    <img src="images/track-progress.svg" alt="" />
+                    <h5 class="field-section-title">Early Access Extras</h5>
+                  </div>
+                  <ul class="list-items">
+                    <li>
+                      <span>Priority Username Access:</span> Get first pick to
+                      claim your username.
+                    </li>
+                    <li>
+                      <span>Extra XP for Feedback:</span> Earn extra XP for
+                      helping improve the app.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="section-item">
+                  <div class="imagw-with-title">
+                    <h5
+                      class="field-section-title"
+                      style="margin: 10px 0 0px 0"
+                    >
+                      Questions?
+                    </h5>
+                  </div>
+                  <p class="winner_popup_content contact-info">
+                    Contact our support team at
+                    <a href="mailto:support@unboundxinc.com"
+                      >support@unboundxinc.com</a
+                    >
+                  </p>
+
+                  <p class="term_and_condition">
+                    Terms and conditions apply. All rewards subject to
+                    availability.
+                  </p>
+                </div>
+              </div>
+              <div id="tab_1" class="tab-content">
+                <div class="section-item">
+                  <div class="imagw-with-title">
+                    <h5 class="field-section-title">
+                      Prize Tiers for June 5th Draw
+                    </h5>
+                  </div>
+                  <div class="responsive-table-wrapper">
+                    <table border="0" id="get-winner-list" class="winner-table">
+                      <thead>
+                        <tr>
+                          <th>Tier</th>
+                          <th>Percentage</th>
+                          <th>Draw Entry Multipliers</th>
+                          <th>Prize Breakdown</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>Tier</th>
+                          <td>Percentage</td>
+                          <td>Entry Multiplier</td>
+                          <td>Prize Breakdown</td>
+                        </tr>
+                        <tr>
+                          <th>Tier 1</th>
+                          <td>Top 10%</td>
+                          <td>5X</td>
+                          <td>$200 of in-app rewards</td>
+                        </tr>
+                        <tr>
+                          <th>Tier 2</th>
+                          <td>Top 25%</td>
+                          <td>4X</td>
+                          <td>$100 of in-app rewards</td>
+                        </tr>
+                        <tr>
+                          <th>Tier 3</th>
+                          <td>Top 75%</td>
+                          <td>3X</td>
+                          <td>$50 of in-app rewards</td>
+                        </tr>
+                        <tr>
+                          <th>Tier 4</th>
+                          <td></td>
+                          <td>2X</td>
+                          <td>$25 of in-app rewards</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="section-item">
+                  <div class="imagw-with-title">
+                    <h5 class="field-section-title">
+                      Referral Program Reward Structure
+                    </h5>
+                  </div>
+                  <table class="winner-table" border="0">
+                    <thead>
+                      <tr>
+                        <th>Reward Type</th>
+                        <th>Details</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Leaderboard Prizes</td>
+                        <td>
+                          Top 5 in Tier 1 receive guaranteed prizes <br />(e.g.
+                          premium items or $ rewards)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Random Draw Prizes</td>
+                        <td>
+                          15 total winners selected randomly across all tiers
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Draw Prize Value</td>
+                        <td>Based on winner’s tier (see above)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="section-item">
+                  <div class="imagw-with-title">
+                    <h5 class="field-section-title">Program Statistics</h5>
+                  </div>
+                  <ul class="list-items italic">
+                    <li>
+                      <i>These statistics will be displayed after the draw</i>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="section-item">
+                  <div class="imagw-with-title">
+                    <h5 class="field-section-title">What is Next?</h5>
+                  </div>
+                  <ul class="list-items">
+                    <li>
+                      <span>Next Prize Draw:</span> Happening on July 10th
+                    </li>
+                    <li>
+                      <span>Referrals Still Count:</span> Keep building on your
+                      progress
+                    </li>
+                    <li>
+                      <span>You Keep Your Spot:</span> Tier status and
+                      leaderboard position carry forward
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="section-item">
+                  <div class="imagw-with-title">
+                    <h5
+                      class="field-section-title"
+                      style="margin: 10px 0 0px 0"
+                    >
+                      Questions?
+                    </h5>
+                  </div>
+                  <p class="winner_popup_content contact-info">
+                    Contact our support team at
+                    <a href="mailto:support@unboundxinc.com"
+                      >support@unboundxinc.com</a
+                    >
+                  </p>
+
+                  <p class="term_and_condition">
+                    Terms and conditions apply. All rewards subject to
+                    availability.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/hooks.min.js" id="wp-hooks-js"></script>
+    <script src="js/i18n.min.js" id="wp-i18n-js"></script>
+    <script id="wp-i18n-js-after">
+      wp.i18n.setLocaleData({ "text direction\u0004ltr": ["ltr"] });
+    </script>
+    <script src="js/index_1.js" id="swv-js"></script>
+    <script id="contact-form-7-js-before">
+      var wpcf7 = {
+        api: {
+          root: "https:\/\/www.unboundxinc.com\/wp-json\/",
+          namespace: "contact-form-7\/v1",
+        },
+      };
+    </script>
+    <script src="js/index.js" id="contact-form-7-js"></script>
+    <script id="my-custom-js-js-extra">
+      var my_ajax_object = {
+        ajax_url: "https:\/\/www.unboundxinc.com\/wp-admin\/admin-ajax.php",
+      };
+    </script>
+    <script src="js/custom.js" id="my-custom-js-js"></script>
+    <script src="js/jquery-3.6.0.min.js" id="jquery-js"></script>
+    <script src="js/app.js" id="theme-scripts-js"></script>
+    <script>
+      /* ── Text-blocks IntersectionObserver ── */
+      (function () {
+        if (!("IntersectionObserver" in window)) {
+          // Fallback: show everything immediately
+          document
+            .querySelectorAll(".text-blocks__section")
+            .forEach(function (el) {
+              el.classList.add("tb-visible");
+            });
+          return;
+        }
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("tb-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.18 },
+        );
+
+        document
+          .querySelectorAll(".text-blocks__section")
+          .forEach(function (el) {
+            observer.observe(el);
+          });
+      })();
+    </script>
+    <script>
+      /* ── Logo Cloud infinite scroll ── */
+      (function () {
+        var logos = [
+          { src: "https://svgl.app/library/salesforce.svg", alt: "Salesforce" },
+          { src: "https://svgl.app/library/microsoft.svg", alt: "Microsoft" },
+          { src: "https://svgl.app/library/aws.svg", alt: "AWS" },
+          { src: "https://svgl.app/library/google.svg", alt: "Google" },
+          { src: "https://svgl.app/library/ibm.svg", alt: "IBM" },
+          { src: "https://svgl.app/library/databricks.svg", alt: "Databricks" },
+          { src: "https://svgl.app/library/deloitte.svg", alt: "Deloitte" },
+          { src: "https://svgl.app/library/accenture.svg", alt: "Accenture" },
+          {
+            src: "https://svgl.app/library/jpmorgan.svg",
+            alt: "JPMorgan Chase",
+          },
+          { src: "https://svgl.app/library/meta.svg", alt: "Meta" },
+        ];
+        var track = document.getElementById("lc-track");
+        if (!track) return;
+        // Build two sets for seamless loop
+        [logos, logos].forEach(function (set) {
+          set.forEach(function (logo) {
+            var img = document.createElement("img");
+            img.src = logo.src;
+            img.alt = logo.alt;
+            img.loading = "lazy";
+            track.appendChild(img);
+          });
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var openBtn = document.getElementById("snb-menu-open");
+        var closeBtn = document.getElementById("snb-menu-close");
+        var overlay = document.getElementById("snb-overlay");
+        var sheet = document.getElementById("snb-sheet");
+
+        function openSheet() {
+          sheet.classList.add("is-open");
+          overlay.classList.add("is-open");
+          document.body.style.overflow = "hidden";
+        }
+        function closeSheet() {
+          sheet.classList.remove("is-open");
+          overlay.classList.remove("is-open");
+          document.body.style.overflow = "";
+        }
+
+        if (openBtn) openBtn.addEventListener("click", openSheet);
+        if (closeBtn) closeBtn.addEventListener("click", closeSheet);
+        if (overlay) overlay.addEventListener("click", closeSheet);
+
+        // Close sheet when a nav link is tapped
+        var sheetLinks = document.querySelectorAll(
+          ".snb-sheet__link, .snb-sheet__footer .snb-btn",
+        );
+        sheetLinks.forEach(function (link) {
+          link.addEventListener("click", closeSheet);
+        });
+      })();
+    </script>
+    <script>
+      /* ── Testimonial reveal (tfb-) ── */
+      (function () {
+        var cards = document.querySelectorAll(".tfb-reveal");
+        if (!cards.length) return;
+        var obs = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                var el = entry.target;
+                var num = parseInt(el.getAttribute("data-tfb-num") || "0", 10);
+                setTimeout(function () {
+                  el.classList.add("tfb-visible");
+                }, num * 150);
+                obs.unobserve(el);
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+        cards.forEach(function (card) {
+          obs.observe(card);
+        });
+      })();
+    </script>
+
+    <script>
+      /* ── Growth chart bar animation ── */
+      (function () {
+        var chart = document.getElementById('cg-chart');
+        if (!chart) return;
+        var bars = chart.querySelectorAll('.cg-bar');
+        var fired = false;
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting && !fired) {
+              fired = true;
+              bars.forEach(function (bar) { bar.classList.add('cg-grow'); });
+              obs.disconnect();
+            }
+          });
+        }, { threshold: 0.4 });
+        obs.observe(chart);
+      })();
+    </script>
+
+    <style>
+      .btn-glow {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.5), 0 0 22px rgba(0, 123, 255, 0.3);
+        animation: blue-pulse 2.4s ease-in-out infinite;
+        transition: box-shadow 0.3s ease;
+      }
+      .btn-glow:hover {
+        box-shadow: 0 0 18px rgba(0, 123, 255, 0.85), 0 0 40px rgba(0, 123, 255, 0.5);
+        animation: none;
+      }
+      @keyframes blue-pulse {
+        0%, 100% { box-shadow: 0 0 10px rgba(0, 123, 255, 0.5), 0 0 22px rgba(0, 123, 255, 0.3); }
+        50%       { box-shadow: 0 0 20px rgba(0, 123, 255, 0.85), 0 0 45px rgba(0, 123, 255, 0.45); }
+      }
+
+      #typewriter-word {
+        color: #007bff;
+      }
+
+      .typewriter-cursor {
+        display: inline-block;
+        width: 3px;
+        background: currentColor;
+        margin-left: 2px;
+        animation: tw-blink 0.75s step-end infinite;
+        vertical-align: baseline;
+        height: 0.85em;
+        position: relative;
+        top: 0.05em;
+      }
+      @keyframes tw-blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+
+    <script>
+      (function () {
+        var words = [
+          "Databricks",
+          "Actimize",
+          "Salesforce",
+          "Data and AI",
+          "Cloud Security",
+          "Enterprise Technologies",
+          "Financial Crime"
+        ];
+        var el = document.getElementById("typewriter-word");
+        if (!el) return;
+
+        var cursor = document.createElement("span");
+        cursor.className = "typewriter-cursor";
+        el.parentNode.insertBefore(cursor, el.nextSibling.nextSibling); // after the dot span
+
+        var wordIndex = 0;
+        var charIndex = 0;
+        var deleting = false;
+        var TYPE_SPEED = 134;
+        var DELETE_SPEED = 76;
+        var PAUSE_END = 3024;
+        var PAUSE_START = 672;
+
+        function tick() {
+          var current = words[wordIndex];
+          if (deleting) {
+            charIndex--;
+            el.textContent = current.slice(0, charIndex);
+            if (charIndex === 0) {
+              deleting = false;
+              wordIndex = (wordIndex + 1) % words.length;
+              setTimeout(tick, PAUSE_START);
+              return;
+            }
+            setTimeout(tick, DELETE_SPEED);
+          } else {
+            charIndex++;
+            el.textContent = current.slice(0, charIndex);
+            if (charIndex === current.length) {
+              deleting = true;
+              setTimeout(tick, PAUSE_END);
+              return;
+            }
+            setTimeout(tick, TYPE_SPEED);
+          }
+        }
+
+        // Insert cursor right after the dot span, remove the standalone cursor we placed above
+        // and place it correctly after the dot
+        var dotSpan = document.querySelector(".typewriter-dot");
+        if (dotSpan) {
+          dotSpan.parentNode.insertBefore(cursor, dotSpan.nextSibling);
+        }
+
+        setTimeout(tick, 1000);
+      })();
+    </script>
+
+    <script>
+      (function () {
+        var header = document.getElementById("JS-site-header");
+        if (!header) return;
+        var onScroll = function () {
+          if (window.scrollY > 10) {
+            header.classList.add("is-scrolled");
+          } else {
+            header.classList.remove("is-scrolled");
+          }
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+      })();
+    </script>
+
+    <script>
+      (function () {
+        var boxes = document.querySelectorAll(".users__box");
+        if (!boxes.length) return;
+
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+
+        boxes.forEach(function (box) {
+          observer.observe(box);
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        var DURATION = 1400;
+        var PAUSE    = 2000;
+
+        function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+
+        function runCounter(el, onDone) {
+          var target = parseInt(el.getAttribute("data-count"), 10);
+          var suffix = el.getAttribute("data-suffix") || "";
+          var start  = null;
+          function step(ts) {
+            if (!start) start = ts;
+            var progress = Math.min((ts - start) / DURATION, 1);
+            el.textContent = Math.round(easeOut(progress) * target) + suffix;
+            if (progress < 1) { requestAnimationFrame(step); }
+            else if (onDone)  { setTimeout(onDone, PAUSE); }
+          }
+          requestAnimationFrame(step);
+        }
+
+        function loopCounter(el) {
+          runCounter(el, function () { loopCounter(el); });
+        }
+
+        var counters = document.querySelectorAll(".cs-stat__num[data-count]");
+        if (!counters.length) return;
+
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              loopCounter(entry.target);
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.5 });
+
+        counters.forEach(function (el) { io.observe(el); });
+      })();
+    </script>
+  </body>
+</html>
