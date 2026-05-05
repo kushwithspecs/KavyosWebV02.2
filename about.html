@@ -182,139 +182,52 @@
     }
     .abt-story__intro {
       font-size: 1rem; color: #4b5563; line-height: 1.75;
-      max-width: 660px; margin: 0 auto;
+      max-width: 720px; margin: 0 auto;
     }
-    /* Timeline bar */
-    .abt-story__timeline {
-      position: relative; z-index: 1;
-      margin: 0 0 0;
+    .abt-story__pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
       padding: 0 clamp(1.5rem, 4vw, 3rem);
-    }
-    .abt-tl-bar {
-      display: flex;
-      align-items: center;
-      gap: 0;
-      border-bottom: 1.5px solid rgba(0,0,0,0.12);
-      padding-bottom: 0;
-      overflow-x: auto;
-      scrollbar-width: none;
-      position: relative;
-    }
-    .abt-tl-bar::after {
-      content: "";
-      position: absolute;
-      bottom: -1.5px; left: 0;
-      height: 2.5px;
-      background: #007bff;
-      border-radius: 2px;
-      width: 0%;
-      animation: tl-line-progress 2.5s linear forwards;
-    }
-    .abt-tl-bar.tl-reset::after { animation: none; width: 0%; }
-    @keyframes tl-line-progress {
-      from { width: 0%; }
-      to   { width: 100%; }
-    }
-    .abt-tl-bar::-webkit-scrollbar { display: none; }
-    .abt-tl-item {
-      flex: 1;
-      min-width: 100px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-      padding-bottom: 16px;
-      position: relative;
-      user-select: none;
-    }
-    .abt-tl-year {
-      font-size: 1rem; font-weight: 400; color: #9ca3af;
-      margin-bottom: 10px;
-      transition: color 0.2s;
-    }
-    .abt-tl-item.is-active .abt-tl-year,
-    .abt-tl-item:hover .abt-tl-year { color: #007bff; font-weight: 500; }
-    .abt-tl-dot {
-      width: 12px; height: 12px; border-radius: 50%;
-      background: #d1d5db;
-      position: absolute; bottom: -7px;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .abt-tl-item.is-active .abt-tl-dot { background: #007bff; transform: scale(1.3); }
-    .abt-tl-item:hover .abt-tl-dot { background: #60a5fa; }
-    /* Nav arrows */
-    .abt-tl-nav {
-      display: flex; gap: 12px;
-      margin: 20px 0 0;
-    }
-    .abt-tl-btn {
-      width: 36px; height: 36px; border-radius: 50%;
-      border: 1.5px solid #d1d5db; background: transparent;
-      cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
-      color: #9ca3af; transition: border-color 0.2s, color 0.2s;
-      padding: 0;
-    }
-    .abt-tl-btn:hover { border-color: #007bff; color: #007bff; }
-    .abt-tl-btn.is-disabled { opacity: 0.3; pointer-events: none; }
-    /* Content panel */
-    .abt-tl-panels {
       position: relative; z-index: 1;
-      margin-top: 48px;
-      padding: 0 clamp(1.5rem, 4vw, 3rem);
-      min-height: 280px;
+      margin-bottom: 48px;
     }
-    .abt-tl-panel {
-      display: none;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
+    .abt-story__pillar {
+      background: #ffffff;
+      border: 1.5px solid #e8f0ff;
+      border-radius: 18px;
+      padding: 32px 28px;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
     }
-    .abt-tl-panel { transition: opacity 0.45s ease, transform 0.45s ease; }
-    .abt-tl-panel.is-active { display: grid; }
-
-    .abt-tl-panel__left { position: relative; }
-    .abt-tl-panel__ghost {
-      position: absolute;
-      right: -20px; top: 50%;
-      transform: translateY(-50%);
-      font-size: clamp(7rem, 14vw, 12rem);
-      font-weight: 500;
-      color: rgba(0,0,0,0.06);
-      line-height: 1;
-      pointer-events: none;
-      user-select: none;
-      white-space: nowrap;
+    .abt-story__pillar:hover {
+      border-color: rgba(0,123,255,0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0,123,255,0.08);
     }
-    .abt-tl-panel__heading {
-      font-size: clamp(1.6rem, 2.8vw, 2.3rem);
-      font-weight: 500; color: #0f172a; line-height: 1.25;
-      margin: 0 0 20px; position: relative; z-index: 1;
-    }
-    .abt-tl-panel__body {
-      font-size: 0.95rem; color: #4b5563; line-height: 1.8;
-      position: relative; z-index: 1; margin: 0 0 24px;
-    }
-    .abt-tl-panel__link {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 0.875rem; font-weight: 500; color: #007bff;
-      text-decoration: none; border-bottom: 1px solid #007bff;
-      padding-bottom: 2px;
-      transition: gap 0.2s;
-      position: relative; z-index: 1;
-    }
-    .abt-tl-panel__link:hover { gap: 10px; }
-    .abt-tl-panel__right {
+    .abt-story__pillar-icon {
+      width: 48px; height: 48px;
+      background: rgba(0,123,255,0.10);
+      border-radius: 12px;
       display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
     }
-    .abt-tl-panel__year-display {
-      font-size: clamp(5rem, 12vw, 10rem);
-      font-weight: 500; color: #007bff; line-height: 1;
+    .abt-story__pillar-icon svg { width: 24px; height: 24px; }
+    .abt-story__pillar-title {
+      font-size: 1.15rem; font-weight: 500; color: #0f172a; margin: 0 0 10px;
+    }
+    .abt-story__pillar-body {
+      font-size: 0.9rem; color: #6b7280; line-height: 1.7; margin: 0;
+    }
+    .abt-story__closing {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 4vw, 3rem);
       text-align: center;
+      font-size: 1.05rem; color: #4b5563; line-height: 1.75;
+      position: relative; z-index: 1;
     }
-    @media (max-width: 740px) {
-      .abt-tl-panel.is-active { grid-template-columns: 1fr; gap: 32px; }
-      .abt-tl-panel__ghost { display: none; }
-      .abt-tl-panel__right { display: none; }
+    @media (max-width: 760px) {
+      .abt-story__pillars { grid-template-columns: 1fr; }
     }
 
     /* ══ LEADERSHIP ══ */
@@ -576,190 +489,39 @@
   <div class="abt-wrap">
     <div class="abt-story__header">
       <p class="abt-story__eyebrow">Our Story</p>
-      <h2 class="abt-story__h2">A firm built on people, precision, and purpose.</h2>
-      <p class="abt-story__intro">From a single recruiter's vision to a specialist firm placing talent across Databricks, NICE Actimize, Salesforce, and enterprise IT — here's how we got here.</p>
+      <h2 class="abt-story__h2">A dynamic firm delivering innovative solutions that drive business success.</h2>
+      <p class="abt-story__intro">Kavyos is dedicated to providing innovative solutions that drive business success. Our team of experienced professionals is passionate about delivering exceptional results and building long-lasting relationships with our clients.</p>
     </div>
   </div>
 
-  <!-- Timeline bar -->
-  <div class="abt-story__timeline">
-    <div class="abt-tl-bar" id="abt-tl-bar">
-      <div class="abt-tl-item is-active" data-index="0">
-        <span class="abt-tl-year">2024</span>
-        <span class="abt-tl-dot"></span>
+  <!-- Service Areas -->
+  <div class="abt-wrap">
+    <div class="abt-story__pillars">
+      <div class="abt-story__pillar">
+        <div class="abt-story__pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#007bff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+        </div>
+        <h3 class="abt-story__pillar-title">Salesforce Implementation</h3>
+        <p class="abt-story__pillar-body">Specialized Salesforce delivery across Sales Cloud, Service Cloud, Marketing Cloud, and large-scale enterprise rollouts.</p>
       </div>
-      <div class="abt-tl-item" data-index="1">
-        <span class="abt-tl-year">2022</span>
-        <span class="abt-tl-dot"></span>
+      <div class="abt-story__pillar">
+        <div class="abt-story__pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#007bff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3 class="abt-story__pillar-title">Recruitment</h3>
+        <p class="abt-story__pillar-body">Talent acquisition and placement of highly specialized technology professionals — quickly, reliably, and built for long-term success.</p>
       </div>
-      <div class="abt-tl-item" data-index="2">
-        <span class="abt-tl-year">2020</span>
-        <span class="abt-tl-dot"></span>
-      </div>
-      <div class="abt-tl-item" data-index="3">
-        <span class="abt-tl-year">2018</span>
-        <span class="abt-tl-dot"></span>
-      </div>
-      <div class="abt-tl-item" data-index="4">
-        <span class="abt-tl-year">2015</span>
-        <span class="abt-tl-dot"></span>
+      <div class="abt-story__pillar">
+        <div class="abt-story__pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#007bff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3 class="abt-story__pillar-title">Anti-Money Laundering</h3>
+        <p class="abt-story__pillar-body">NICE Actimize and AML expertise for banks, fintechs, and regulated enterprises navigating financial crime technology and compliance.</p>
       </div>
     </div>
-    <div class="abt-tl-nav">
-      <button class="abt-tl-btn is-disabled" id="abt-tl-prev" aria-label="Previous">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-      </button>
-      <button class="abt-tl-btn" id="abt-tl-next" aria-label="Next">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 19l7-7-7-7"/></svg>
-      </button>
-    </div>
+    <p class="abt-story__closing">We stay current with the latest industry developments, leveraging cutting-edge technologies to provide the best possible solutions for our clients.</p>
   </div>
 
-  <!-- Content panels -->
-  <div class="abt-tl-panels">
-
-    <div class="abt-tl-panel is-active" data-index="0">
-      <div class="abt-tl-panel__left">
-        <span class="abt-tl-panel__ghost">2024</span>
-        <h3 class="abt-tl-panel__heading">Expanding into Data & AI and Cloud Security practices</h3>
-        <p class="abt-tl-panel__body">Kavyos broadened its specialization to include Data & AI and Cloud Security talent — responding to surging enterprise demand for professionals who can build and govern modern data platforms and secure cloud infrastructure at scale.</p>
-        <a href="solutions.html" class="abt-tl-panel__link">Explore our solutions <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </div>
-      <div class="abt-tl-panel__right">
-        <span class="abt-tl-panel__year-display">2024</span>
-      </div>
-    </div>
-
-    <div class="abt-tl-panel" data-index="1">
-      <div class="abt-tl-panel__left">
-        <span class="abt-tl-panel__ghost">2022</span>
-        <h3 class="abt-tl-panel__heading">Databricks practice launched — becoming a go-to source for lakehouse talent</h3>
-        <p class="abt-tl-panel__body">As Databricks adoption accelerated across financial services and healthcare, Kavyos built a dedicated practice to source and place engineers, architects, and data scientists with deep hands-on Databricks expertise.</p>
-        <a href="solutions.html#sol-databricks" class="abt-tl-panel__link">Databricks practice <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </div>
-      <div class="abt-tl-panel__right">
-        <span class="abt-tl-panel__year-display">2022</span>
-      </div>
-    </div>
-
-    <div class="abt-tl-panel" data-index="2">
-      <div class="abt-tl-panel__left">
-        <span class="abt-tl-panel__ghost">2020</span>
-        <h3 class="abt-tl-panel__heading">NICE Actimize specialization — serving regulated financial institutions</h3>
-        <p class="abt-tl-panel__body">Kavyos formalized its AML and financial crime technology practice, developing a curated network of NICE Actimize professionals — one of the hardest talent pools to source — for banks, fintechs, and compliance-driven enterprises.</p>
-        <a href="solutions.html#sol-actimize" class="abt-tl-panel__link">Actimize practice <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </div>
-      <div class="abt-tl-panel__right">
-        <span class="abt-tl-panel__year-display">2020</span>
-      </div>
-    </div>
-
-    <div class="abt-tl-panel" data-index="3">
-      <div class="abt-tl-panel__left">
-        <span class="abt-tl-panel__ghost">2018</span>
-        <h3 class="abt-tl-panel__heading">Salesforce practice grows — enterprise-scale deployments across the US</h3>
-        <p class="abt-tl-panel__body">With Salesforce becoming the CRM backbone of Fortune 500 companies, Kavyos scaled its dedicated Salesforce staffing practice to cover Sales Cloud, Service Cloud, Marketing Cloud, and large-scale implementation projects nationwide.</p>
-        <a href="solutions.html#sol-salesforce" class="abt-tl-panel__link">Salesforce practice <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </div>
-      <div class="abt-tl-panel__right">
-        <span class="abt-tl-panel__year-display">2018</span>
-      </div>
-    </div>
-
-    <div class="abt-tl-panel" data-index="4">
-      <div class="abt-tl-panel__left">
-        <span class="abt-tl-panel__ghost">2015</span>
-        <h3 class="abt-tl-panel__heading">Kavyos founded — a vision to place the right people in the right roles</h3>
-        <p class="abt-tl-panel__body">Raj Agarwala founded Kavyos with a straightforward belief: that truly understanding a technology platform is the only way to find talent that actually delivers. What started as a boutique IT staffing firm quickly built a reputation for precision and trust.</p>
-      </div>
-      <div class="abt-tl-panel__right">
-        <span class="abt-tl-panel__year-display">2015</span>
-      </div>
-    </div>
-
-  </div>
-
-  <script>
-    (function () {
-      var items = Array.from(document.querySelectorAll(".abt-tl-item"));
-      var panels = Array.from(document.querySelectorAll(".abt-tl-panel"));
-      var prevBtn = document.getElementById("abt-tl-prev");
-      var nextBtn = document.getElementById("abt-tl-next");
-      var current = 0;
-      var DELAY = 2500;
-      var timer = null;
-      var bar = document.getElementById("abt-tl-bar");
-
-      function restartBarAnim() {
-        bar.classList.add("tl-reset");
-        requestAnimationFrame(function () {
-          requestAnimationFrame(function () {
-            bar.classList.remove("tl-reset");
-          });
-        });
-      }
-
-      function go(idx) {
-        restartBarAnim();
-        panels[current].style.opacity = "0";
-        panels[current].style.transform = "translateY(12px)";
-        items[current].classList.remove("is-active");
-
-        current = idx;
-
-        items[current].classList.add("is-active");
-        prevBtn.classList.toggle("is-disabled", current === 0);
-        nextBtn.classList.toggle("is-disabled", current === items.length - 1);
-
-        setTimeout(function () {
-          panels.forEach(function (p) { p.classList.remove("is-active"); p.style.opacity = ""; p.style.transform = ""; });
-          panels[current].classList.add("is-active");
-          panels[current].style.opacity = "0";
-          panels[current].style.transform = "translateY(12px)";
-          requestAnimationFrame(function () {
-            requestAnimationFrame(function () {
-              panels[current].style.transition = "opacity 0.45s ease, transform 0.45s ease";
-              panels[current].style.opacity = "1";
-              panels[current].style.transform = "translateY(0)";
-            });
-          });
-        }, 200);
-
-        resetTimer();
-      }
-
-      function advance() {
-        go((current + 1) % items.length);
-      }
-
-      function resetTimer() {
-        clearInterval(timer);
-        timer = setInterval(advance, DELAY);
-      }
-
-      items.forEach(function (item) {
-        item.addEventListener("click", function () { go(parseInt(item.dataset.index)); });
-      });
-      prevBtn.addEventListener("click", function () { go(current > 0 ? current - 1 : items.length - 1); });
-      nextBtn.addEventListener("click", function () { go((current + 1) % items.length); });
-
-      /* Pause on hover */
-      var section = document.querySelector(".abt-story");
-      section.addEventListener("mouseenter", function () {
-        clearInterval(timer);
-        bar.style.setProperty("--tw-animate-pause", "paused");
-        if (bar.lastElementChild) bar.style.animationPlayState = "paused";
-        bar.classList.add("tl-reset");
-      });
-      section.addEventListener("mouseleave", function () {
-        bar.classList.remove("tl-reset");
-        restartBarAnim();
-        resetTimer();
-      });
-
-      resetTimer();
-    })();
-  </script>
 </section>
 
 <!-- LEADERSHIP -->
@@ -774,7 +536,7 @@
 
       <!-- Raj Agarwala -->
       <div class="abt-team-card">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&fit=crop&q=80" alt="Raj Agarwala" />
+        <img src="images/team/raj-agarwala.png" alt="Raj Agarwala" />
         <div class="abt-team-card__base">
           <p class="abt-team-card__base-name">Raj Agarwala</p>
           <p class="abt-team-card__base-role">Founder / President</p>
@@ -788,7 +550,7 @@
 
       <!-- Scott Krutan -->
       <div class="abt-team-card">
-        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&fit=crop&q=80" alt="Scott Krutan" />
+        <img src="images/team/scott-krutan.png" alt="Scott Krutan" />
         <div class="abt-team-card__base">
           <p class="abt-team-card__base-name">Scott Krutan</p>
           <p class="abt-team-card__base-role">COO</p>
@@ -802,7 +564,7 @@
 
       <!-- Shivani Parekh -->
       <div class="abt-team-card">
-        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&fit=crop&q=80" alt="Shivani Parekh" />
+        <img src="images/team/shivani-parekh.png" alt="Shivani Parekh" />
         <div class="abt-team-card__base">
           <p class="abt-team-card__base-name">Shivani Parekh</p>
           <p class="abt-team-card__base-role">Senior Vice President</p>
@@ -816,7 +578,7 @@
 
       <!-- Alka Singhvi -->
       <div class="abt-team-card">
-        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&fit=crop&q=80" alt="Alka Singhvi" />
+        <img src="images/team/alka-singhvi.png" alt="Alka Singhvi" />
         <div class="abt-team-card__base">
           <p class="abt-team-card__base-name">Alka Singhvi</p>
           <p class="abt-team-card__base-role">Resource Manager</p>
@@ -847,7 +609,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.663 17h4.673M12 3v1m6.364 1.636-.707.707M21 12h-1M4 12H3m3.343-5.657-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
         </div>
         <h3 class="abt-value-card__title">Innovation</h3>
-        <p class="abt-value-card__body">We continually evolve our processes and recruitment strategies to stay ahead in the fast-paced tech industry, delivering forward-thinking solutions for every client.</p>
+        <p class="abt-value-card__body">We continually evolve our processes and recruitment strategies to stay ahead in the fast-paced tech industry.</p>
       </div>
 
       <div class="abt-value-card">
@@ -855,7 +617,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         </div>
         <h3 class="abt-value-card__title">Integrity</h3>
-        <p class="abt-value-card__body">We believe in treating our clients and candidates with honesty and respect, ensuring long-term relationships built on trust, fairness, and consistent follow-through.</p>
+        <p class="abt-value-card__body">We believe in treating our clients and candidates with honesty and respect, ensuring long-term relationships.</p>
       </div>
 
       <div class="abt-value-card">
@@ -863,7 +625,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
         </div>
         <h3 class="abt-value-card__title">Transparency</h3>
-        <p class="abt-value-card__body">We prioritize open communication throughout the entire staffing process, delivering on our promises and ensuring every stakeholder stays informed every step of the way.</p>
+        <p class="abt-value-card__body">We prioritize open communication and transparency throughout the entire staffing process, delivering on our promises.</p>
       </div>
 
     </div>

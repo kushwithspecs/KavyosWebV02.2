@@ -838,21 +838,29 @@
         animation-play-state: paused;
       }
       .lc-track img {
-        height: 20px;
+        height: 32px;
         width: auto;
+        max-width: 160px;
         object-fit: contain;
         pointer-events: none;
         user-select: none;
-        filter: grayscale(100%) opacity(0.55);
+        filter: grayscale(100%) opacity(0.6);
         transition: filter 200ms;
         flex-shrink: 0;
+      }
+      .lc-track img.lc-logo--invert {
+        filter: grayscale(100%) opacity(0.6) invert(1);
       }
       .lc-track img:hover {
         filter: grayscale(0%) opacity(1);
       }
+      .lc-track img.lc-logo--invert:hover {
+        filter: invert(1);
+      }
       @media (min-width: 768px) {
         .lc-track img {
-          height: 26px;
+          height: 40px;
+          max-width: 180px;
         }
       }
       @keyframes lc-scroll {
@@ -1199,6 +1207,99 @@
         height: 7px;
         border-radius: 50%;
         background: #007bff;
+      }
+
+      /* Tablet — 2-column layout */
+      @media (max-width: 1024px) {
+        .cpa-section {
+          padding: 64px clamp(1.25rem, 4vw, 3rem);
+          position: relative;
+          top: auto;
+          z-index: 13;
+          border-radius: 24px 24px 0 0;
+        }
+        /* disable sticky hero on mobile so it doesn't stay pinned behind */
+        .section-sticky--first {
+          position: relative !important;
+          height: auto !important;
+          top: auto !important;
+        }
+        .section-sticky--first .home-hero {
+          height: auto !important;
+          min-height: 0 !important;
+        }
+        .cpa-inner {
+          padding: 24px 0;
+        }
+        .cpa-sub {
+          margin-bottom: 40px;
+        }
+        .cpa-grid {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto;
+          gap: 14px;
+          aspect-ratio: auto;
+        }
+        .cpa-grid .cpa-card:nth-child(1) {
+          grid-row: auto;
+          grid-column: 1 / 3;
+        }
+        .cpa-grid .cpa-card:nth-child(4) {
+          grid-column: 1 / 3;
+        }
+        .cpa-card {
+          min-height: 220px;
+        }
+        .cpa-card--featured {
+          min-height: 260px;
+        }
+      }
+
+      /* Mobile — single column */
+      @media (max-width: 640px) {
+        .cpa-section {
+          padding: 48px 1rem;
+          border-radius: 20px 20px 0 0;
+        }
+        .cpa-inner {
+          padding: 16px 0;
+        }
+        .cpa-eyebrow {
+          font-size: 0.8rem;
+        }
+        .cpa-sub {
+          font-size: 1rem;
+          margin-bottom: 32px;
+        }
+        .cpa-grid {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          gap: 12px;
+          aspect-ratio: auto;
+        }
+        .cpa-grid .cpa-card:nth-child(1),
+        .cpa-grid .cpa-card:nth-child(4) {
+          grid-column: 1;
+          grid-row: auto;
+        }
+        .cpa-card {
+          padding: 22px 20px;
+          min-height: 0;
+        }
+        .cpa-card--featured {
+          min-height: 220px;
+        }
+        .cpa-icon {
+          width: 40px;
+          height: 40px;
+          margin-bottom: 12px;
+        }
+        .cpa-card__title {
+          font-size: 1.05rem;
+        }
+        .cpa-card__list li {
+          font-size: 0.9rem;
+        }
       }
 
       /* ── Featured Practice Wrap (Databricks + Actimize) ── */
@@ -3574,19 +3675,21 @@
       /* ── Logo Cloud infinite scroll ── */
       (function () {
         var logos = [
-          { src: "https://svgl.app/library/salesforce.svg", alt: "Salesforce" },
-          { src: "https://svgl.app/library/microsoft.svg", alt: "Microsoft" },
-          { src: "https://svgl.app/library/aws.svg", alt: "AWS" },
-          { src: "https://svgl.app/library/google.svg", alt: "Google" },
-          { src: "https://svgl.app/library/ibm.svg", alt: "IBM" },
-          { src: "https://svgl.app/library/databricks.svg", alt: "Databricks" },
-          { src: "https://svgl.app/library/deloitte.svg", alt: "Deloitte" },
-          { src: "https://svgl.app/library/accenture.svg", alt: "Accenture" },
-          {
-            src: "https://svgl.app/library/jpmorgan.svg",
-            alt: "JPMorgan Chase",
-          },
-          { src: "https://svgl.app/library/meta.svg", alt: "Meta" },
+          { src: "images/clients/clarivate.png", alt: "Clarivate" },
+          { src: "images/clients/dentsu.png", alt: "Dentsu" },
+          { src: "images/clients/quaker-houghton.webp", alt: "Quaker Houghton" },
+          { src: "images/clients/nyk-line.png", alt: "NYK Line" },
+          { src: "images/clients/godiva.png", alt: "Godiva" },
+          { src: "images/clients/acushnet.gif", alt: "Acushnet Company" },
+          { src: "images/clients/casper.avif", alt: "Casper" },
+          { src: "images/clients/moet-hennessy.webp", alt: "Moët Hennessy", invert: true },
+          { src: "images/clients/heineken.png", alt: "Heineken", invert: true },
+          { src: "images/clients/breakthrough-t1d.png", alt: "Breakthrough T1D" },
+          { src: "images/clients/nice-actimize.png", alt: "NICE Actimize" },
+          { src: "images/clients/everest.png", alt: "Everest" },
+          { src: "images/clients/one.png", alt: "Ocean Network Express" },
+          { src: "images/clients/conair.png", alt: "Conair" },
+          { src: "images/clients/capco.png", alt: "Capco", invert: true },
         ];
         var track = document.getElementById("lc-track");
         if (!track) return;
@@ -3597,6 +3700,7 @@
             img.src = logo.src;
             img.alt = logo.alt;
             img.loading = "lazy";
+            if (logo.invert) img.className = "lc-logo--invert";
             track.appendChild(img);
           });
         });
