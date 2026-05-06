@@ -19,7 +19,6 @@
         display: none !important;
       }
     </style>
-    <!-- <script src="https://www.unboundxinc.com/wp-content/themes/unboundx/public/assets/loadpagefast.js"></script> -->
     <title>Kavyos | AI-Powered Talent Staffing & Enterprise Platforms</title>
     <meta name="robots" content="max-image-preview:large" />
     <style>
@@ -1629,12 +1628,9 @@
       href="css/appmodel-popup.css"
       media=""
     />
-    <link rel="canonical" href="https://www.unboundxinc.com/" />
+    <link rel="canonical" href="https://kavyos.com/" />
     <meta property="og:image" content="images/All_Social_Media_Posts.webp" />
-    <meta
-      name="twitter:image"
-      content="https://unboundxinc.com/wp-content/uploads/2025/05/All_Social_Media_Posts.jpg"
-    />
+    <meta name="twitter:image" content="images/All_Social_Media_Posts.webp" />
     <link rel="icon" href="images/cropped-favicon-32x32.png" sizes="32x32" />
     <link
       rel="icon"
@@ -1642,10 +1638,7 @@
       sizes="192x192"
     />
     <link rel="apple-touch-icon" href="images/cropped-favicon-180x180.png" />
-    <meta
-      name="msapplication-TileImage"
-      content="https://www.unboundxinc.com/wp-content/uploads/2024/05/cropped-favicon-270x270.png"
-    />
+    <meta name="msapplication-TileImage" content="images/cropped-favicon-192x192.png" />
     <meta
       name="description"
       content="Kavyos delivers specialized talent for AI-driven enterprise platforms including Salesforce, Actimize AML, and Databricks."
@@ -1653,7 +1646,7 @@
     <!-- Google tag (gtag.js) -->
     <script
       async=""
-      src="https://www.googletagmanager.com/gtag/js?id=G-0RQLLQSMZN"
+      src="https://www.googletagmanager.com/gtag/js?id=GT-P8R8ZS9R"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -1661,12 +1654,8 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-0RQLLQSMZN");
+      gtag("config", "GT-P8R8ZS9R");
     </script>
-    <meta
-      name="google-site-verification"
-      content="TgVMTEGKpzoAvoRz0EG9woRxn0ZXaPPQAHYZroeIoKs"
-    />
   </head>
 
   <body
@@ -1787,7 +1776,7 @@
           <div class="app-popup">
             <div class="appmodel-top tttt">
               <a
-                href="https://unboundxinc.com"
+                href="#"
                 class="model-logo"
                 target="_blank"
               >
@@ -1796,14 +1785,14 @@
                   class="desktop-view"
                   width="270"
                   height="67"
-                  alt="Unboundxinc"
+                  alt="Kavyos"
                 />
                 <img
                   src="images/model-logo.svg"
                   class="mobile-view"
                   width="146"
                   height="36"
-                  alt="Unboundxinc"
+                  alt="Kavyos"
                 />
               </a>
               <!-- <span class="csi-text">Connect. Share. Invest.</span> -->
@@ -1815,14 +1804,14 @@
                   class="desktop-view"
                   width="300"
                   height="200"
-                  alt="Unboundxinc"
+                  alt="Kavyos"
                 />
                 <img
                   src="images/app-small-devices.png"
                   class="mobile-view"
                   width="430"
                   height="260"
-                  alt="Unboundxinc"
+                  alt="Kavyos"
                 />
               </div>
               <div class="app-content">
@@ -2478,7 +2467,7 @@
 
               <!-- Right: form -->
               <div class="kv-contact__form-card">
-                <form class="kv-form" action="/#wpcf7-f180-o1" method="post" aria-label="Contact form" novalidate>
+                <form class="kv-form" id="kv-contact-form" aria-label="Contact form" novalidate>
                   <div class="kv-form__row">
                     <input type="text" name="your-name" placeholder="Name*" required maxlength="400" />
                     <input type="email" name="your-email" placeholder="E-mail*" required maxlength="400" />
@@ -2486,11 +2475,35 @@
                   <input type="tel" name="your-phone" placeholder="Phone number" maxlength="400" />
                   <textarea name="your-message" placeholder="Your message" maxlength="2000"></textarea>
                   <label class="kv-form__acceptance">
-                    <input type="checkbox" name="acceptance-186" value="1" />
+                    <input type="checkbox" name="acceptance" value="1" required />
                     I consent to be contacted by Kavyos about my inquiry
                   </label>
                   <button type="submit" class="kv-form__submit">Send Message</button>
                 </form>
+                <script>
+                  (function () {
+                    var form = document.getElementById("kv-contact-form");
+                    if (!form) return;
+                    form.addEventListener("submit", function (e) {
+                      e.preventDefault();
+                      var d = new FormData(form);
+                      var name = (d.get("your-name") || "").toString().trim();
+                      var email = (d.get("your-email") || "").toString().trim();
+                      var phone = (d.get("your-phone") || "").toString().trim();
+                      var msg = (d.get("your-message") || "").toString().trim();
+                      var subject = "Inquiry from " + (name || "website visitor");
+                      var body =
+                        "Name: " + name + "\n" +
+                        "Email: " + email + "\n" +
+                        "Phone: " + phone + "\n\n" +
+                        "Message:\n" + msg;
+                      window.location.href =
+                        "mailto:Accounts@kavyos.com?subject=" +
+                        encodeURIComponent(subject) +
+                        "&body=" + encodeURIComponent(body);
+                    });
+                  })();
+                </script>
               </div>
 
             </div>
@@ -3189,7 +3202,7 @@
         <div class="app-popup">
           <div class="appmodel-top">
             <a
-              href="https://unboundxinc.com"
+              href="#"
               class="model-logo"
               target="_blank"
             >
@@ -3198,14 +3211,14 @@
                 class="desktop-view"
                 width="270"
                 height="67"
-                alt="Unboundxinc"
+                alt="Kavyos"
               />
               <img
                 src="images/model-logo_1.svg"
                 class="mobile-view"
                 width="146"
                 height="36"
-                alt="Unboundxinc"
+                alt="Kavyos"
               />
             </a>
           </div>
@@ -3216,14 +3229,14 @@
                 class="desktop-view"
                 width="300"
                 height="200"
-                alt="Unboundxinc"
+                alt="Kavyos"
               />
               <img
                 src="app-small-devices.png.dontreplace"
                 class="mobile-view"
                 width="430"
                 height="260"
-                alt="Unboundxinc"
+                alt="Kavyos"
               />
             </div>
             <div class="app-content">
@@ -3240,7 +3253,7 @@
             </div>
             <div class="download-app-s-g-pay">
               <a
-                href="https://apps.apple.com/us/app/unbound-x/id6745837250"
+                href="#"
                 target="_blank"
               >
                 <img
@@ -3251,7 +3264,7 @@
                 />
               </a>
               <a
-                href="https://play.google.com/store/apps/details?id=com.unboundx"
+                href="#"
                 target="_blank"
               >
                 <img
@@ -3266,15 +3279,15 @@
               Rewards subject to eligibility and verification; see
               <a
                 target="_blank"
-                href="https://www.unboundxinc.com/terms-condition/"
+                href="#"
                 >Terms of Use</a
               >,
               <a
                 target="_blank"
-                href="https://www.unboundxinc.com/privacy-policy/"
+                href="#"
                 >Privacy Policy</a
               >, and
-              <a href="https://www.unboundxinc.com/legal/" target="_blank"
+              <a href="#" target="_blank"
                 >Legal Center</a
               >. Apple & Google are not sponsors of this promotion.
             </div>
@@ -3446,8 +3459,8 @@
                   </div>
                   <p class="winner_popup_content contact-info">
                     Contact our support team at
-                    <a href="mailto:support@unboundxinc.com"
-                      >support@unboundxinc.com</a
+                    <a href="mailto:Accounts@kavyos.com"
+                      >Accounts@kavyos.com</a
                     >
                   </p>
 
@@ -3586,8 +3599,8 @@
                   </div>
                   <p class="winner_popup_content contact-info">
                     Contact our support team at
-                    <a href="mailto:support@unboundxinc.com"
-                      >support@unboundxinc.com</a
+                    <a href="mailto:Accounts@kavyos.com"
+                      >Accounts@kavyos.com</a
                     >
                   </p>
 
@@ -3611,15 +3624,15 @@
     <script id="contact-form-7-js-before">
       var wpcf7 = {
         api: {
-          root: "https:\/\/www.unboundxinc.com\/wp-json\/",
-          namespace: "contact-form-7\/v1",
+          root: "/wp-json/",
+          namespace: "contact-form-7/v1",
         },
       };
     </script>
     <script src="js/index.js" id="contact-form-7-js"></script>
     <script id="my-custom-js-js-extra">
       var my_ajax_object = {
-        ajax_url: "https:\/\/www.unboundxinc.com\/wp-admin\/admin-ajax.php",
+        ajax_url: "/wp-admin/admin-ajax.php",
       };
     </script>
     <script src="js/custom.js" id="my-custom-js-js"></script>

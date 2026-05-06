@@ -4,7 +4,7 @@ let submittedUserEmail = null;
 document.addEventListener('DOMContentLoaded', function () {
 	var buttons = document.querySelectorAll('section.cta .cta__button-wrapper > a');
 	buttons.forEach(function(button) {
-		if (button.getAttribute('href') === 'https://ubverse.unboundx.co/for-founders') {
+		if (button.getAttribute('href') === '#') {
 		  	button.classList.remove('js-popup-open');
 	  	}
 	});
@@ -323,25 +323,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		linkedin: "https://www.linkedin.com/sharing/share-offsite/?url=",
 		facebook: "https://www.facebook.com/sharer/sharer.php?u=",
 		twitter: "https://twitter.com/intent/tweet?text=",
-		email: "mailto:?subject=You’re Invited: Get on the UnBound X Waitlist Early 🚀&body="
+		email: "mailto:?subject=Check out Kavyos&body="
 	};
 	// handles the messages for the different social medias
 	const platformMessages = {
 		// for 'X' link
 		twitter: (url) => `
-			Just joined the waitlist for UnBound X — a new platform reimagining how we connect, share, and invest.
-			Spots are limited — get in early:
-			👉 ${url}
-			🔗 unboundx.co
-			📱 @unboundxapp`.trim(),
+			Check out Kavyos — specialized talent for Databricks, NICE Actimize, Salesforce, and enterprise IT.
+			👉 ${url}`.trim(),
 		email: (url) => `
-			I just joined the waitlist for UnBound X — a new platform that's reimagining how we connect, share, and invest. It fuses community, insights, and investing in a way I haven’t seen before.
-			By joining early, you can:
-			✅ Earn rewards & XP
-			🏆 Climb the leaderboard
-			🎉 Get exclusive access to the beta launch event
-			Spots are limited, so if you're curious, jump in soon:
-			👉 Join with my link: ${url}
+			Check out Kavyos — they connect organizations with highly specialized technology professionals across Databricks, NICE Actimize, Salesforce, and enterprise IT.
+			👉 ${url}
 			`.trim()
 	};
 	document.querySelectorAll(".share-to-social-media").forEach(img => {
@@ -445,11 +437,7 @@ function referralLeaderboardTabSwitch(evt, tabId) {
 	if (!apiCallCache.has(tabId)) {
 		apiCallCache.add(tabId);
 		let apiUrl = '';
-		if (tabId === 'referral-tab') {
-			apiUrl = `https://development.unboundxinc.us/api/activity-points/web-Referral/share-url?email=${submittedUserEmail}`;
-		} else if (tabId === 'leaderboard-tab') {
-			apiUrl = `https://development.unboundxinc.us/api/activity-points/web-Referral/leaderboard=${submittedUserEmail}`;
-		}
+		// Referral/leaderboard endpoints removed — no external backend in this build
 
 		if (apiUrl) {
 			fetch(apiUrl)

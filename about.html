@@ -699,7 +699,7 @@
       </div>
     </div>
     <div class="kv-contact__form-card">
-      <form class="kv-form" action="/#wpcf7-f180-o1" method="post" aria-label="Contact form" novalidate>
+      <form class="kv-form" id="kv-contact-form-about" aria-label="Contact form" novalidate>
         <div class="kv-form__row">
           <input type="text" name="your-name" placeholder="Name*" required maxlength="400" />
           <input type="email" name="your-email" placeholder="E-mail*" required maxlength="400" />
@@ -707,11 +707,35 @@
         <input type="tel" name="your-phone" placeholder="Phone number" maxlength="400" />
         <textarea name="your-message" placeholder="Your message" maxlength="2000"></textarea>
         <label class="kv-form__acceptance">
-          <input type="checkbox" name="acceptance" value="1" />
+          <input type="checkbox" name="acceptance" value="1" required />
           I consent to be contacted by Kavyos about my inquiry
         </label>
         <button type="submit" class="kv-form__submit">Send Message</button>
       </form>
+      <script>
+        (function () {
+          var form = document.getElementById("kv-contact-form-about");
+          if (!form) return;
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var d = new FormData(form);
+            var name = (d.get("your-name") || "").toString().trim();
+            var email = (d.get("your-email") || "").toString().trim();
+            var phone = (d.get("your-phone") || "").toString().trim();
+            var msg = (d.get("your-message") || "").toString().trim();
+            var subject = "Inquiry from " + (name || "website visitor");
+            var body =
+              "Name: " + name + "\n" +
+              "Email: " + email + "\n" +
+              "Phone: " + phone + "\n\n" +
+              "Message:\n" + msg;
+            window.location.href =
+              "mailto:Accounts@kavyos.com?subject=" +
+              encodeURIComponent(subject) +
+              "&body=" + encodeURIComponent(body);
+          });
+        })();
+      </script>
     </div>
   </div>
 </section>
